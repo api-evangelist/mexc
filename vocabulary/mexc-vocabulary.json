@@ -1,0 +1,92 @@
+{
+  "title": "MEXC API Vocabulary",
+  "description": "Key terms and concepts used across MEXC REST and WebSocket APIs",
+  "version": "1.0.0",
+  "source": "https://mexcdevelop.github.io/apidocs/spot_v3_en/",
+  "terms": [
+    {
+      "term": "symbol",
+      "definition": "A trading pair identifier on MEXC, formatted as base asset + quote asset (e.g., BTCUSDT, ETHUSDT). Futures pairs use underscore notation (e.g., BTC_USDT).",
+      "examples": ["BTCUSDT", "ETHUSDT", "BTC_USDT"]
+    },
+    {
+      "term": "orderId",
+      "definition": "A unique string identifier assigned by MEXC to each order. Format: C02__<numeric-id>.",
+      "examples": ["C02__468615423963070464"]
+    },
+    {
+      "term": "timeInForce",
+      "definition": "Policy controlling how long an order remains active. GTC (Good Till Canceled) stays until filled or canceled. IOC (Immediate Or Cancel) fills immediately or cancels. FOK (Fill Or Kill) must fill entirely immediately or cancel.",
+      "values": ["GTC", "IOC", "FOK"]
+    },
+    {
+      "term": "orderType",
+      "definition": "Determines how an order is executed. LIMIT orders specify a price. MARKET orders execute at best available price. LIMIT_MAKER orders are limit orders that only post to the order book.",
+      "values": ["LIMIT", "MARKET", "LIMIT_MAKER"]
+    },
+    {
+      "term": "orderStatus",
+      "definition": "Current state of an order on the exchange.",
+      "values": ["NEW", "PARTIALLY_FILLED", "FILLED", "CANCELED", "PENDING_CANCEL", "REJECTED", "EXPIRED"]
+    },
+    {
+      "term": "recvWindow",
+      "definition": "Maximum time in milliseconds after the timestamp that the request is valid. Used to prevent replay attacks. Maximum value is 60000ms.",
+      "unit": "milliseconds"
+    },
+    {
+      "term": "timestamp",
+      "definition": "Unix timestamp in milliseconds at the time the request was sent. Must be within recvWindow of the server time.",
+      "unit": "milliseconds"
+    },
+    {
+      "term": "signature",
+      "definition": "HMAC SHA256 signature of the query string/body, using the API secret key. Required for all authenticated endpoints.",
+      "algorithm": "HMAC-SHA256"
+    },
+    {
+      "term": "X-MEXC-APIKEY",
+      "definition": "HTTP request header containing the API key for authentication on Spot API endpoints.",
+      "type": "header"
+    },
+    {
+      "term": "weightLimit",
+      "definition": "MEXC's rate limiting unit. Each endpoint has an assigned weight. IP-based limit is 300 weight units per 10 seconds; UID-based limit is 500 weight units per 10 seconds.",
+      "limits": {
+        "ip": "300 per 10 seconds",
+        "uid": "500 per 10 seconds"
+      }
+    },
+    {
+      "term": "kline",
+      "definition": "Candlestick/OHLCV data representing open, high, low, close prices and volume for a given time interval. Also called candlestick data.",
+      "intervals": ["1m", "5m", "15m", "30m", "60m", "4h", "1d", "1W", "1M"]
+    },
+    {
+      "term": "depth",
+      "definition": "Order book snapshot showing bid and ask price levels with their quantities. Also called order book depth.",
+      "synonyms": ["order book"]
+    },
+    {
+      "term": "leverage",
+      "definition": "Multiplier applied to futures positions, amplifying both gains and losses. MEXC Futures supports leverage from 1x to 125x depending on the contract.",
+      "context": "futures"
+    },
+    {
+      "term": "fundingRate",
+      "definition": "Periodic payment between long and short futures position holders to keep the futures price anchored to the spot price. Charged every 8 hours.",
+      "context": "futures"
+    },
+    {
+      "term": "openType",
+      "definition": "Futures margin mode: 1 for isolated margin, 2 for cross margin.",
+      "context": "futures",
+      "values": [1, 2]
+    },
+    {
+      "term": "subAccount",
+      "definition": "A child account created under a master broker account. Supports independent API keys and trading. Up to 30 sub-accounts per master account.",
+      "context": "broker"
+    }
+  ]
+}

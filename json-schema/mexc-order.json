@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api.mexc.com/schemas/mexc-order",
+  "title": "MEXC Order",
+  "description": "Represents a spot or futures order on the MEXC exchange.",
+  "type": "object",
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "description": "Trading pair symbol (e.g., BTCUSDT)"
+    },
+    "orderId": {
+      "type": "string",
+      "description": "Unique order identifier"
+    },
+    "clientOrderId": {
+      "type": "string",
+      "description": "Client-assigned order identifier"
+    },
+    "price": {
+      "type": "string",
+      "description": "Order price"
+    },
+    "origQty": {
+      "type": "string",
+      "description": "Original order quantity"
+    },
+    "executedQty": {
+      "type": "string",
+      "description": "Executed quantity"
+    },
+    "cummulativeQuoteQty": {
+      "type": "string",
+      "description": "Cumulative quote asset quantity"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["NEW", "PARTIALLY_FILLED", "FILLED", "CANCELED", "PENDING_CANCEL", "REJECTED", "EXPIRED"],
+      "description": "Order status"
+    },
+    "timeInForce": {
+      "type": "string",
+      "enum": ["GTC", "IOC", "FOK"],
+      "description": "Time in force policy"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["LIMIT", "MARKET", "LIMIT_MAKER"],
+      "description": "Order type"
+    },
+    "side": {
+      "type": "string",
+      "enum": ["BUY", "SELL"],
+      "description": "Order side"
+    },
+    "stopPrice": {
+      "type": "string",
+      "description": "Stop price for stop orders"
+    },
+    "time": {
+      "type": "integer",
+      "format": "int64",
+      "description": "Order creation timestamp in milliseconds"
+    },
+    "updateTime": {
+      "type": "integer",
+      "format": "int64",
+      "description": "Order last update timestamp in milliseconds"
+    },
+    "isWorking": {
+      "type": "boolean",
+      "description": "Whether the order is currently active"
+    },
+    "origQuoteOrderQty": {
+      "type": "string",
+      "description": "Original quote order quantity"
+    }
+  },
+  "required": ["symbol", "orderId", "status", "type", "side"]
+}

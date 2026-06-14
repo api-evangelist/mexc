@@ -1,0 +1,31 @@
+{
+  "title": "Place a Futures Order",
+  "description": "Example of placing a perpetual futures limit order on the MEXC Futures REST API",
+  "request": {
+    "method": "POST",
+    "url": "https://contract.mexc.com/api/v1/private/order/submit",
+    "headers": {
+      "ApiKey": "YOUR_API_KEY",
+      "Request-Time": "1718000000000",
+      "Signature": "YOUR_HMAC_SHA256_SIGNATURE",
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "symbol": "BTC_USDT",
+      "price": 60000.0,
+      "vol": 1,
+      "side": 1,
+      "type": 1,
+      "openType": 1,
+      "leverage": 10
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "success": true,
+      "code": 0,
+      "data": "C02__468615423963070465"
+    }
+  }
+}

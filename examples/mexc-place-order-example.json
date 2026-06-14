@@ -1,0 +1,40 @@
+{
+  "title": "Place a Spot Limit Order",
+  "description": "Example of placing a limit buy order for BTCUSDT on the MEXC Spot REST API",
+  "request": {
+    "method": "POST",
+    "url": "https://api.mexc.com/api/v3/order",
+    "headers": {
+      "X-MEXC-APIKEY": "YOUR_API_KEY",
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    "body": {
+      "symbol": "BTCUSDT",
+      "side": "BUY",
+      "type": "LIMIT",
+      "quantity": "0.001",
+      "price": "60000.00",
+      "timeInForce": "GTC",
+      "timestamp": 1718000000000,
+      "signature": "YOUR_HMAC_SHA256_SIGNATURE"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "symbol": "BTCUSDT",
+      "orderId": "C02__468615423963070464",
+      "orderListId": -1,
+      "clientOrderId": "",
+      "transactTime": 1718000000123,
+      "price": "60000.00",
+      "origQty": "0.001",
+      "executedQty": "0.000",
+      "cummulativeQuoteQty": "0.000",
+      "status": "NEW",
+      "timeInForce": "GTC",
+      "type": "LIMIT",
+      "side": "BUY"
+    }
+  }
+}

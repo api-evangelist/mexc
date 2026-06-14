@@ -1,0 +1,31 @@
+{
+  "title": "Get 24hr Ticker Price Change Statistics",
+  "description": "Example of fetching 24-hour ticker data for BTCUSDT on the MEXC Spot REST API",
+  "request": {
+    "method": "GET",
+    "url": "https://api.mexc.com/api/v3/ticker/24hr?symbol=BTCUSDT",
+    "headers": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "symbol": "BTCUSDT",
+      "priceChange": "1234.56",
+      "priceChangePercent": "2.01",
+      "prevClosePrice": "61234.00",
+      "lastPrice": "62468.56",
+      "bidPrice": "62460.00",
+      "bidQty": "0.45",
+      "askPrice": "62475.00",
+      "askQty": "0.12",
+      "openPrice": "61234.00",
+      "highPrice": "63000.00",
+      "lowPrice": "60800.00",
+      "volume": "1234.567",
+      "quoteVolume": "76543210.12",
+      "openTime": 1717913600000,
+      "closeTime": 1718000000000,
+      "count": 85432
+    }
+  }
+}

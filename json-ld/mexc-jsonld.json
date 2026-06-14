@@ -1,0 +1,106 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "mexc": "https://www.mexc.com/",
+    "api": "https://api.mexc.com/",
+    "contract": "https://contract.mexc.com/",
+    "openapi": "https://spec.openapis.org/oas/v3.1.0#",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcterms": "http://purl.org/dc/terms/"
+  },
+  "@type": "WebAPI",
+  "@id": "https://www.mexc.com/mexc-api",
+  "name": "MEXC API",
+  "description": "MEXC is a global cryptocurrency exchange providing REST and WebSocket APIs for spot trading, perpetual futures, market data, order management, account management, and wallet operations across 1,200+ trading pairs.",
+  "url": "https://www.mexc.com/mexc-api",
+  "provider": {
+    "@type": "Organization",
+    "name": "MEXC",
+    "url": "https://www.mexc.com",
+    "sameAs": [
+      "https://github.com/mexcdevelop"
+    ]
+  },
+  "documentation": "https://mexcdevelop.github.io/apidocs/spot_v3_en/",
+  "termsOfService": "https://www.mexc.com/terms",
+  "license": "https://www.mexc.com/terms",
+  "category": [
+    "Cryptocurrency",
+    "Exchange",
+    "Trading",
+    "Finance",
+    "Blockchain"
+  ],
+  "hasAPI": [
+    {
+      "@type": "WebAPI",
+      "@id": "https://api.mexc.com",
+      "name": "MEXC Spot REST API v3",
+      "description": "REST API for spot trading, market data, account management, and wallet operations.",
+      "url": "https://mexcdevelop.github.io/apidocs/spot_v3_en/",
+      "endpointURL": "https://api.mexc.com",
+      "documentation": "https://mexcdevelop.github.io/apidocs/spot_v3_en/",
+      "protocol": "HTTPS",
+      "openapi": {
+        "@type": "dcat:Distribution",
+        "dcat:downloadURL": "openapi/mexc-spot-rest-api-openapi.json",
+        "dcterms:format": "application/json",
+        "dcterms:title": "MEXC Spot REST API OpenAPI Specification"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "wss://wbs-api.mexc.com/ws",
+      "name": "MEXC Spot WebSocket Streams",
+      "description": "Real-time market data and account updates via WebSocket for spot trading.",
+      "url": "https://mexcdevelop.github.io/apidocs/spot_v3_en/#websocket-market-streams",
+      "endpointURL": "wss://wbs-api.mexc.com/ws",
+      "protocol": "WebSocket"
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "https://contract.mexc.com",
+      "name": "MEXC Futures REST API v1",
+      "description": "REST API for perpetual futures trading including order management and market data.",
+      "url": "https://mexcdevelop.github.io/apidocs/contract_v1_en/",
+      "endpointURL": "https://contract.mexc.com",
+      "documentation": "https://mexcdevelop.github.io/apidocs/contract_v1_en/",
+      "protocol": "HTTPS",
+      "openapi": {
+        "@type": "dcat:Distribution",
+        "dcat:downloadURL": "openapi/mexc-futures-rest-api-openapi.json",
+        "dcterms:format": "application/json",
+        "dcterms:title": "MEXC Futures REST API OpenAPI Specification"
+      }
+    },
+    {
+      "@type": "WebAPI",
+      "@id": "wss://contract.mexc.com/edge",
+      "name": "MEXC Futures WebSocket API",
+      "description": "Real-time futures market data and account events via WebSocket.",
+      "url": "https://mexcdevelop.github.io/apidocs/contract_v1_en/#websocket-api",
+      "endpointURL": "wss://contract.mexc.com/edge",
+      "protocol": "WebSocket"
+    }
+  ],
+  "softwareVersion": "v3 (Spot), v1 (Futures)",
+  "sdkAvailable": true,
+  "sdk": {
+    "@type": "SoftwareSourceCode",
+    "name": "MEXC API SDK",
+    "url": "https://github.com/mexcdevelop/mexc-api-sdk",
+    "codeRepository": "https://github.com/mexcdevelop/mexc-api-sdk"
+  },
+  "potentialAction": [
+    {
+      "@type": "TradeAction",
+      "name": "Place Spot Order",
+      "target": "https://api.mexc.com/api/v3/order"
+    },
+    {
+      "@type": "SearchAction",
+      "name": "Get Market Data",
+      "target": "https://api.mexc.com/api/v3/ticker/24hr"
+    }
+  ]
+}

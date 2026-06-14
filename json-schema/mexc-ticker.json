@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://api.mexc.com/schemas/mexc-ticker",
+  "title": "MEXC Ticker",
+  "description": "24-hour rolling window price change statistics for a trading pair on MEXC.",
+  "type": "object",
+  "properties": {
+    "symbol": {
+      "type": "string",
+      "description": "Trading pair symbol (e.g., BTCUSDT)"
+    },
+    "priceChange": {
+      "type": "string",
+      "description": "Price change over the last 24 hours"
+    },
+    "priceChangePercent": {
+      "type": "string",
+      "description": "Price change percentage over the last 24 hours"
+    },
+    "prevClosePrice": {
+      "type": "string",
+      "description": "Previous close price"
+    },
+    "lastPrice": {
+      "type": "string",
+      "description": "Last traded price"
+    },
+    "bidPrice": {
+      "type": "string",
+      "description": "Best bid price"
+    },
+    "bidQty": {
+      "type": "string",
+      "description": "Best bid quantity"
+    },
+    "askPrice": {
+      "type": "string",
+      "description": "Best ask price"
+    },
+    "askQty": {
+      "type": "string",
+      "description": "Best ask quantity"
+    },
+    "openPrice": {
+      "type": "string",
+      "description": "Opening price of the 24-hour window"
+    },
+    "highPrice": {
+      "type": "string",
+      "description": "Highest price in the 24-hour window"
+    },
+    "lowPrice": {
+      "type": "string",
+      "description": "Lowest price in the 24-hour window"
+    },
+    "volume": {
+      "type": "string",
+      "description": "Total traded base asset volume"
+    },
+    "quoteVolume": {
+      "type": "string",
+      "description": "Total traded quote asset volume"
+    },
+    "openTime": {
+      "type": "integer",
+      "format": "int64",
+      "description": "Start time of the 24-hour window in milliseconds"
+    },
+    "closeTime": {
+      "type": "integer",
+      "format": "int64",
+      "description": "End time of the 24-hour window in milliseconds"
+    },
+    "count": {
+      "type": "integer",
+      "description": "Total number of trades"
+    }
+  },
+  "required": ["symbol", "lastPrice", "volume"]
+}

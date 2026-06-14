@@ -16,6 +16,8 @@ apis:
     properties:
       - url: https://mexcdevelop.github.io/apidocs/spot_v3_en/
         type: Documentation
+      - url: openapi/mexc-spot-rest-api-openapi.json
+        type: OpenAPI
     description: >-
       The MEXC Spot REST API (v3) provides programmatic access to MEXC's spot exchange, supporting over
       1,200 cryptocurrency trading pairs. Developers can retrieve real-time and historical market data,
@@ -58,6 +60,8 @@ apis:
     properties:
       - url: https://mexcdevelop.github.io/apidocs/contract_v1_en/
         type: Documentation
+      - url: openapi/mexc-futures-rest-api-openapi.json
+        type: OpenAPI
     description: >-
       The MEXC Futures REST API provides access to MEXC's perpetual futures trading platform. Public
       endpoints expose contract details, order book depth, index prices, fair prices, funding rates,
@@ -134,6 +138,10 @@ common:
     url: https://www.mexc.com/support/articles/17827791520875
   - type: Support
     url: https://t.me/MEXC_API
+  - type: JSONLd
+    url: json-ld/mexc-jsonld.json
+  - type: Vocabulary
+    url: vocabulary/mexc-vocabulary.json
   - type: Features
     data:
       - name: Spot Trading
