@@ -1,0 +1,118 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: MEXC
+providerId: mexc
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - FinOps
+  - FOCUS
+  - Cryptocurrency
+  - Exchange
+  - Trading
+description: 'FOCUS-aligned FinOps for MEXC: API connectivity is free; cost is incurred as
+  per-transaction maker/taker fees for spot and futures trading. Spot trading charges 0% maker
+  and 0.05% taker fees for standard accounts. API Futures trading (launched March 31, 2026) carries
+  a separate, higher fee schedule — 0.06% maker and 0.08% taker as of June 1, 2026 — that
+  supersedes any web/app promotional rates. MX token holdings and the Market Maker Program provide
+  fee reduction and rebate paths. Brokers receive revenue-share rebates on sub-account trading volume.'
+sources:
+  - https://www.mexc.com/mexc-api
+  - https://mexcdevelop.github.io/apidocs/spot_v3_en/
+  - https://www.mexc.com/announcements/article/introducing-api-futures-trading-on-mar-31-2026-17827791534551
+  - https://www.mexc.com/announcements/article/updates-to-api-futures-trading-fees-jun-1-2026-17827791535742
+  - https://www.mexc.com/learn/article/how-to-become-a-market-maker-on-mexc-/1
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: MEXC Global
+serviceCategory: Financial Services / Trading
+billingModel:
+  pricingCategory: Take Rate (Per Trade) + Optional Token Discount + Market Maker Rebate
+  billingFrequency: Continuous Settlement (per trade)
+  billingCurrency: USD (settlement in traded assets or MX token for fee payment)
+  chargeCategories:
+    - Usage
+    - Adjustment
+    - Refund
+    - Credit
+focusColumns:
+  ServiceName: MEXC
+  ServiceCategory: Financial Services
+  ProviderName: MEXC Global
+  PublisherName: MEXC Global
+  InvoiceIssuerName: MEXC Global
+  BillingCurrency: USD
+  ChargeCategory: Usage
+meters:
+  - name: spot_trades
+    unit: transaction
+    aggregation: sum
+    dimensions:
+      - symbol
+      - side
+      - maker_or_taker
+      - account_type
+  - name: spot_volume
+    unit: USD
+    aggregation: sum
+    dimensions:
+      - symbol
+      - maker_or_taker
+  - name: api_futures_trades
+    unit: transaction
+    aggregation: sum
+    dimensions:
+      - contract
+      - side
+      - maker_or_taker
+      - fee_schedule_version
+  - name: api_futures_volume
+    unit: USD
+    aggregation: sum
+    dimensions:
+      - contract
+      - maker_or_taker
+  - name: mx_fee_payments
+    unit: MX
+    aggregation: sum
+    dimensions:
+      - product
+      - discount_tier
+  - name: api_requests
+    unit: request
+    aggregation: sum
+    dimensions:
+      - api
+      - endpoint
+      - weight
+      - account_tier
+principles:
+  - name: Visibility
+    description: Pull trade and fee detail via the Spot API (/api/v3/myTrades) and Futures API
+      (/api/v1/contract/deal/history) endpoints. Monitor API Futures fees separately as they follow
+      a distinct schedule that overrides web/app promotional rates. Review announcements at
+      mexc.com/announcements/api-updates for fee schedule changes.
+  - name: Allocation
+    description: Use MEXC's sub-account system (up to 30 per master account) and the Broker API
+      sub-account hierarchy to attribute trading fees to teams, strategies, or end-clients. API
+      keys can be scoped to specific trading pairs to limit exposure per sub-account.
+  - name: Optimization
+    description: Prefer maker-side liquidity for spot trading to benefit from the 0% maker fee.
+      For API Futures, monitor fee schedule announcements closely as rates have changed multiple
+      times in 2026. Qualify for the Market Maker Program (T1/T2/T3) to obtain maker rebates and
+      elevated API rate limits. Hold 500+ MX tokens to secure a 50% fee discount on standard
+      spot and futures trading.
+  - name: Accountability
+    description: Assign owners for each sub-account; alert on per-account rate limit violations
+      (HTTP 429) and IP bans. Track API Futures fee schedule changes via the announcements feed.
+      Reconcile USD-denominated PnL against settled trading fees, noting that API Futures fees
+      supersede any displayed web/app promotional rates.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

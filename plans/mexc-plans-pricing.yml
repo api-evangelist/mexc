@@ -1,0 +1,217 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: MEXC
+providerId: mexc
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Cryptocurrency
+  - Exchange
+  - Trading
+  - Futures
+  - Market Data
+  - Finance
+description: MEXC does not charge for API access itself; commercial pricing is expressed as
+  spot and futures trading commissions. Spot trading carries 0% maker and 0.05% taker fees for
+  standard accounts. API Futures trading (launched March 31, 2026) operates under a separate,
+  higher fee schedule that overrides web and app rates — currently 0.06% maker and 0.08% taker
+  as of June 1, 2026. A Market Maker Program offers tiered rebates and enhanced API rate limits
+  for qualifying liquidity providers. An optional MX token discount grants fee reductions.
+  Institutional and Broker partnerships are available by application.
+sources:
+  - https://www.mexc.com/mexc-api
+  - https://mexcdevelop.github.io/apidocs/spot_v3_en/
+  - https://www.mexc.com/announcements/article/introducing-api-futures-trading-on-mar-31-2026-17827791534551
+  - https://www.mexc.com/announcements/article/updates-to-api-futures-trading-fees-jun-1-2026-17827791535742
+  - https://www.mexc.com/learn/article/how-to-become-a-market-maker-on-mexc-/1
+plans:
+  - id: mexc-api-access
+    name: API Access (No Fee)
+    type: freemium
+    description: Free programmatic access to MEXC's REST and WebSocket APIs for any authenticated
+      account with completed KYC verification. API connectivity and market data are not billed;
+      revenue is captured per-trade.
+    entries:
+      - label: API connectivity
+        name: api_access
+        type: flat
+        metric: request
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: Market data (REST + WebSocket)
+        name: market_data
+        type: flat
+        metric: request
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: Spot REST API
+      - name: Futures REST API
+      - name: Spot WebSocket Streams
+      - name: Futures WebSocket API
+      - name: Wallet Endpoints
+      - name: Sub-Account Management
+  - id: mexc-spot-trading
+    name: Spot Trading
+    type: usage-based
+    description: Standard maker/taker commission for all spot trading accounts. No volume thresholds
+      required. MX token holders receive an optional fee discount.
+    entries:
+      - label: Maker fee
+        name: spot_maker
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.0000%'
+        userMultiplied: false
+      - label: Taker fee
+        name: spot_taker
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.0500%'
+        userMultiplied: false
+      - label: MX token discount (500+ MX held)
+        name: mx_discount_500
+        type: tiered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '-50% on trading fees'
+        userMultiplied: false
+      - label: MX fee deduction (MX used for fee payment)
+        name: mx_fee_deduction
+        type: tiered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '-20% additional reduction'
+        userMultiplied: false
+    elements:
+      - name: Spot Trading
+      - name: 1,200+ trading pairs
+  - id: mexc-api-futures-trading
+    name: API Futures Trading
+    type: usage-based
+    description: Separate fee schedule applicable to all Futures orders placed via API. These rates
+      override any promotional or web/app rates. As of June 1, 2026 the rates are 0.06% maker and
+      0.08% taker. Applies to all Futures pairs except Innovation Zone pairs.
+    entries:
+      - label: API Futures maker fee (effective June 1, 2026)
+        name: api_futures_maker
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.0600%'
+        userMultiplied: false
+      - label: API Futures taker fee (effective June 1, 2026)
+        name: api_futures_taker
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.0800%'
+        userMultiplied: false
+    elements:
+      - name: Perpetual Futures Trading via API
+      - name: Real-time order management
+      - name: Requires KYC verification
+  - id: mexc-market-maker
+    name: Market Maker Program
+    type: tiered
+    description: Invitation-only program for qualified liquidity providers. Three tiers (T1, T2, T3)
+      offer progressively lower maker fees (including rebates at higher tiers), elevated API rate
+      limits, round-the-clock dedicated support, increased withdrawal limits, interest-free financing,
+      and priority API v3 deployment. Qualification requires 30-day trading volume and spot account
+      asset thresholds.
+    entries:
+      - label: T1 maker / taker fee; 200/s API rate limit
+        name: mm_t1
+        type: tiered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '-0.0025% maker / 0.0200% taker'
+        userMultiplied: false
+      - label: T2 maker / taker fee; 300/s API rate limit
+        name: mm_t2
+        type: tiered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '-0.0050% maker / 0.0150% taker'
+        userMultiplied: false
+      - label: T3 maker / taker fee; 400/s API rate limit
+        name: mm_t3
+        type: tiered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '-0.0075% maker / 0.0100% taker'
+        userMultiplied: false
+    elements:
+      - name: Enhanced API rate limits (200–400 requests/second)
+      - name: Maker fee rebates at all tiers
+      - name: 24/7 dedicated technical support
+      - name: Increased withdrawal limits
+      - name: Interest-free financing with crypto collateral
+      - name: Priority API v3 deployment
+  - id: mexc-broker-institutional
+    name: Broker / Institutional
+    type: enterprise
+    description: Institutional and broker partnership programs for platforms integrating MEXC
+      liquidity. Three broker modes — API Broker, Independent Broker, and OAuth Broker — offer
+      trading rebates, marketing support, sub-account hierarchies, and customized solutions.
+      Apply via broker@mexc.com.
+    entries:
+      - label: Broker trading rebates
+        name: broker_rebate
+        type: tiered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: contact broker@mexc.com
+        userMultiplied: false
+    elements:
+      - name: API Broker mode (copy trading, trading bots)
+      - name: Independent Broker mode (wallet, market data)
+      - name: OAuth Broker mode (third-party OAuth 2.0)
+      - name: Sub-account management
+      - name: Trading rebates and marketing support
+      - name: Dedicated institutional support
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

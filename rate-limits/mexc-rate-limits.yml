@@ -1,0 +1,127 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: MEXC
+providerId: mexc
+created: '2026-06-13'
+modified: '2026-06-13'
+reconciled: true
+tags:
+  - Cryptocurrency
+  - Exchange
+  - Trading
+  - Market Data
+  - Rate Limiting
+description: MEXC applies a weight-based rate limit model for the Spot REST API and a flat
+  request-count model for the Futures REST API. Spot REST limits are enforced per IP (300 weight
+  per 10 seconds) and per UID (500 weight per 10 seconds). Futures REST endpoints are limited to
+  20 requests per 2-second window. WebSocket connections are capped at 100 messages per second with
+  a maximum of 30 channel subscriptions per connection. HTTP 429 indicates an exceeded limit;
+  repeated violations escalate to temporary IP bans. Market Maker Program tiers (T1/T2/T3) receive
+  elevated rate limits of 200, 300, and 400 requests per second respectively.
+sources:
+  - https://mexcdevelop.github.io/apidocs/spot_v3_en/
+  - https://www.mexc.com/api-docs/spot-v3/general-info
+  - https://mexcdevelop.github.io/apidocs/contract_v1_en/
+headers:
+  apiKey: X-MEXC-APIKEY
+  retryAfter: Retry-After
+responseCodes:
+  throttled: 429
+limits:
+  - name: Spot REST — IP weight limit
+    scope: IP
+    metric: weight_per_10_seconds
+    limit: 300
+    notes: All IP-weighted Spot REST endpoints share 300 weight units per 10-second rolling window.
+      Different endpoints consume varying weight based on resource intensity. Track via response headers.
+  - name: Spot REST — UID weight limit
+    scope: account
+    metric: weight_per_10_seconds
+    limit: 500
+    notes: All UID-weighted Spot REST endpoints share 500 weight units per 10-second rolling window.
+      Authenticated order-related endpoints are typically UID-weighted.
+  - name: Futures REST — request rate limit
+    scope: IP
+    metric: requests_per_2_seconds
+    limit: 20
+    notes: Standard Futures (contract) REST endpoints are limited to 20 requests per 2-second window
+      for both public market data and authenticated account/trading endpoints.
+  - name: Spot WebSocket — message rate
+    scope: connection
+    metric: messages_per_second
+    limit: 100
+    notes: Each WebSocket connection is limited to 100 subscription/unsubscription messages per second.
+      Connections that exceed this limit are disconnected.
+  - name: Spot WebSocket — channel subscriptions
+    scope: connection
+    metric: concurrent_subscriptions
+    limit: 30
+    notes: A single WebSocket connection supports a maximum of 30 channel subscriptions. Create multiple
+      connections to subscribe to more channels.
+  - name: Spot WebSocket — connection duration
+    scope: connection
+    metric: hours
+    limit: 24
+    notes: WebSocket connections are valid for a maximum of 24 hours. Clients must re-establish
+      connections after expiry.
+  - name: API keys per account
+    scope: account
+    metric: count
+    limit: 30
+    notes: Each MEXC account may create up to 30 API keys. Each key supports up to 10 IP address
+      restrictions.
+  - name: Open orders per account
+    scope: account
+    metric: count
+    limit: 500
+    notes: Maximum of 500 active open orders per account at any time.
+  - name: Sub-accounts per master account
+    scope: account
+    metric: count
+    limit: 30
+    notes: Each master account may create up to 30 sub-accounts.
+  - name: Market Maker T1 — API rate limit
+    scope: account
+    metric: requests_per_second
+    limit: 200
+    notes: Market Maker Program T1 tier accounts receive an enhanced limit of 200 requests per second.
+  - name: Market Maker T2 — API rate limit
+    scope: account
+    metric: requests_per_second
+    limit: 300
+    notes: Market Maker Program T2 tier accounts receive an enhanced limit of 300 requests per second.
+  - name: Market Maker T3 — API rate limit
+    scope: account
+    metric: requests_per_second
+    limit: 400
+    notes: Market Maker Program T3 tier accounts receive the highest enhanced limit of 400 requests
+      per second. All Market Maker tiers also include an account-level capacity of 50 requests per second.
+policies:
+  - name: Weight model (Spot REST)
+    description: Each Spot REST endpoint declares a weight value. IP-based limits aggregate to 300
+      weight per 10 seconds; UID-based limits aggregate to 500 weight per 10 seconds. Clients should
+      track consumed weight and throttle proactively.
+  - name: Backoff on 429
+    description: An HTTP 429 response is returned when rate limits are exceeded. The Retry-After
+      header specifies the number of seconds to wait before retrying. Continuing to send requests
+      during the backoff window is treated as abuse.
+  - name: IP ban escalation
+    description: Repeatedly exceeding rate limits or failing to respect 429 responses results in
+      temporary IP bans. Ban durations scale from 2 minutes up to 3 days for repeat offenders.
+  - name: WebSocket keepalive
+    description: If no valid subscription exists on a WebSocket connection, the server disconnects
+      after 30 seconds. If subscriptions are active but no data flows, disconnection occurs after
+      1 minute. Clients should send periodic ping frames to maintain the connection.
+  - name: No sandbox environment
+    description: MEXC does not provide a sandbox or test environment. All API calls connect directly
+      to the live production exchange.
+  - name: recvWindow parameter
+    description: Signed Spot REST requests may include a recvWindow parameter (default 5,000 ms,
+      maximum 60,000 ms) to control the validity window for timestamp-based replay protection.
+  - name: Futures timestamp window
+    description: Futures REST authenticated requests must carry a Request-Time timestamp within
+      10 seconds of server time (adjustable up to 60 seconds via the recv-window header).
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
