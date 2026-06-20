@@ -10,7 +10,7 @@ apis:
       - Market Data
       - Spot
       - Trading
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.mexc.com
     humanURL: https://mexcdevelop.github.io/apidocs/spot_v3_en/
     properties:
@@ -33,7 +33,7 @@ apis:
       - Real-Time
       - Streaming
       - WebSocket
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: wss://wbs-api.mexc.com/ws
     humanURL: https://mexcdevelop.github.io/apidocs/spot_v3_en/#websocket-market-streams
     properties:
@@ -54,7 +54,7 @@ apis:
       - Exchange
       - Futures
       - Trading
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://contract.mexc.com
     humanURL: https://mexcdevelop.github.io/apidocs/contract_v1_en/
     properties:
@@ -80,7 +80,7 @@ apis:
       - Real-Time
       - Streaming
       - WebSocket
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: wss://contract.mexc.com/edge
     humanURL: https://mexcdevelop.github.io/apidocs/contract_v1_en/#websocket-api
     properties:
@@ -101,7 +101,7 @@ apis:
       - Cryptocurrency
       - Enterprise
       - Sub-Account
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.mexc.com
     humanURL: https://mexcdevelop.github.io/apidocs/
     properties:
@@ -181,7 +181,7 @@ name: MEXC
 kind: contract
 access: 3rd-Party
 position: Consuming
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Cryptocurrency
   - Exchange
