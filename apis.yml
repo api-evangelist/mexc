@@ -138,7 +138,7 @@ common:
     url: https://www.mexc.com/support/articles/17827791520875
   - type: Support
     url: https://t.me/MEXC_API
-  - type: JSONLd
+  - type: JSONLD
     url: json-ld/mexc-jsonld.json
   - type: Vocabulary
     url: vocabulary/mexc-vocabulary.json
