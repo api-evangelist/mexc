@@ -116,6 +116,10 @@ apis:
       perform universal transfers between spot and futures accounts, and track rebate history. Up to 30
       sub-accounts can be maintained per master account.
 common:
+  - type: DomainSecurity
+    url: security/mexc-domain-security.yml
+  - type: Authentication
+    url: authentication/mexc-authentication.yml
   - type: Portal
     url: https://www.mexc.com/mexc-api
   - type: Documentation
@@ -172,6 +176,8 @@ common:
         description: Exploit price differences across MEXC spot and futures markets programmatically.
       - name: Broker Integration
         description: Build copy-trading platforms, trading bots, and wallet apps using the Broker API.
+  - url: https://blog.mexc.com/feed/
+    type: BlogRSS
 description: >-
   MEXC is a global cryptocurrency exchange providing REST and WebSocket APIs for spot trading, perpetual
   futures, market data, order management, account management, and wallet operations across 1,200+
