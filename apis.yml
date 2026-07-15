@@ -116,6 +116,8 @@ apis:
       perform universal transfers between spot and futures accounts, and track rebate history. Up to 30
       sub-accounts can be maintained per master account.
 common:
+  - type: AgenticAccess
+    url: agentic-access/mexc-agentic-access.yml
   - type: DomainSecurity
     url: security/mexc-domain-security.yml
   - type: Authentication
