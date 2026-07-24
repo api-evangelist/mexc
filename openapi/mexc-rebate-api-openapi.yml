@@ -1,0 +1,156 @@
+openapi: 3.0.3
+info:
+  title: MEXC Futures REST API v1 Accounts and Transactions Rebate API
+  description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
+  version: 1.0.0
+servers:
+- url: https://contract.mexc.com
+tags:
+- name: Rebate
+paths:
+  /api/v3/rebate/taxQuery:
+    get:
+      tags:
+      - Rebate
+      summary: Get Rebate History Records
+      operationId: get_rebate_history_records
+      description: Get Rebate History Records
+      parameters:
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/rebate/detail:
+    get:
+      tags:
+      - Rebate
+      summary: Get Rebate Records Detail
+      operationId: get_rebate_records_detail
+      description: Get Rebate Records Detail
+      parameters:
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/rebate/detail/kickback:
+    get:
+      tags:
+      - Rebate
+      summary: Get Self Rebate Records Detail
+      operationId: get_self_rebate_records_detail
+      description: Get Self Rebate Records Detail
+      parameters:
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/rebate/referCode:
+    get:
+      tags:
+      - Rebate
+      summary: Query ReferCode
+      operationId: query_refercode
+      description: Query ReferCode
+      parameters:
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-MEXC-APIKEY

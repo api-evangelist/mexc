@@ -1,0 +1,411 @@
+openapi: 3.0.3
+info:
+  title: MEXC Futures REST API v1 Accounts and Transactions Parent child account API
+  description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
+  version: 1.0.0
+servers:
+- url: https://contract.mexc.com
+tags:
+- name: Parent child account
+paths:
+  /api/v3/sub-account/virtualSubAccount:
+    post:
+      tags:
+      - Parent child account
+      summary: new virtualSubAccount
+      operationId: new_virtualsubaccount
+      description: new virtualSubAccount
+      parameters:
+      - name: subAccount
+        in: query
+        description: subAccount
+        required: false
+        schema:
+          type: string
+      - name: note
+        in: query
+        description: remarks
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/sub-account/list:
+    get:
+      tags:
+      - Parent child account
+      summary: Query sub-account list
+      operationId: query_sub_account_list
+      description: Query sub-account list
+      parameters:
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/sub-account/apiKey:
+    post:
+      tags:
+      - Parent child account
+      summary: new sub-account apiKey
+      operationId: new_sub_account_apikey
+      description: new sub-account apiKey
+      parameters:
+      - name: subAccount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: note
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: permissions
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+    get:
+      tags:
+      - Parent child account
+      summary: Query sub-account apiKey
+      operationId: query_sub_account_apikey
+      description: Query sub-account apiKey
+      parameters:
+      - name: subAccount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+    delete:
+      tags:
+      - Parent child account
+      summary: Delete sub-account apiKey
+      operationId: delete_sub_account_apikey
+      description: Delete sub-account apiKey
+      parameters:
+      - name: subAccount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: apiKey
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          text/plain:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/capital/sub-account/universalTransfer:
+    post:
+      tags:
+      - Parent child account
+      summary: Sub-account UniversalTransfer
+      operationId: sub_account_universaltransfer
+      description: Sub-account UniversalTransfer
+      parameters:
+      - name: asset
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: amount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: fromAccountType
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: fromAccount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: toAccountType
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: toAccount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: clientTranId
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+    get:
+      tags:
+      - Parent child account
+      summary: Query Sub-account UniversalTransfer Record
+      operationId: query_sub_account_universaltransfer_record
+      description: Query Sub-account UniversalTransfer Record
+      parameters:
+      - name: asset
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: fromAccountType
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: toAccountType
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: toAccount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/sub-account/futures:
+    post:
+      tags:
+      - Parent child account
+      summary: Enable Futures For Sub-account
+      operationId: enable_futures_for_sub_account
+      description: Enable Futures For Sub-account
+      parameters:
+      - name: subAccount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/sub-account/margin:
+    post:
+      tags:
+      - Parent child account
+      summary: Enable Margin For Sub-account
+      operationId: enable_margin_for_sub_account
+      description: Enable Margin For Sub-account
+      parameters:
+      - name: subAccount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-MEXC-APIKEY

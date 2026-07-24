@@ -1,0 +1,503 @@
+openapi: 3.0.3
+info:
+  title: MEXC Futures REST API v1 Accounts and Transactions Wallet API
+  description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
+  version: 1.0.0
+servers:
+- url: https://contract.mexc.com
+tags:
+- name: Wallet
+paths:
+  /api/v3/capital/withdraw/apply:
+    post:
+      tags:
+      - Wallet
+      summary: Withdraw Apply
+      operationId: withdraw_apply
+      description: Withdraw Apply
+      parameters:
+      - name: coin
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: network
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: address
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: amount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/capital/deposit/hisrec:
+    get:
+      tags:
+      - Wallet
+      summary: Query Deposit Hisrec
+      operationId: query_deposit_hisrec
+      description: Query Deposit Hisrec
+      parameters:
+      - name: coin
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/capital/config/getall:
+    get:
+      tags:
+      - Wallet
+      summary: Query All Coins
+      operationId: query_all_coins
+      description: Query All Coins
+      parameters:
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/broker/sub-account/apiKey:
+    post:
+      tags:
+      - Wallet
+      summary: Get Listen Key
+      operationId: get_listen_key
+      description: Get Listen Key
+      parameters:
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/capital/transfer:
+    post:
+      tags:
+      - Wallet
+      summary: Transfer
+      operationId: transfer
+      description: Transfer
+      parameters:
+      - name: fromAccountType
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: toAccountType
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: amount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: asset
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+    get:
+      tags:
+      - Wallet
+      summary: Transfer Record
+      operationId: transfer_record
+      description: Transfer Record
+      parameters:
+      - name: fromAccountType
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: toAccountType
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/capital/withdraw/history:
+    get:
+      tags:
+      - Wallet
+      summary: Withdraw History
+      operationId: withdraw_history
+      description: Withdraw History
+      parameters:
+      - name: coin
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/capital/transfer/tranId:
+    get:
+      tags:
+      - Wallet
+      summary: Query Transfer By TranId
+      operationId: query_transfer_by_tranid
+      description: Query Transfer By TranId
+      parameters:
+      - name: tranId
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/capital/deposit/address:
+    post:
+      tags:
+      - Wallet
+      summary: Generate Deposit Address
+      operationId: generate_deposit_address
+      description: Generate Deposit Address
+      parameters:
+      - name: coin
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: network
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+    get:
+      tags:
+      - Wallet
+      summary: Query Deposit Address
+      operationId: query_deposit_address
+      description: Query Deposit Address
+      parameters:
+      - name: coin
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: amount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/capital/convert/list:
+    get:
+      tags:
+      - Wallet
+      summary: Get Assets That Can Be Converted Into MX
+      operationId: get_assets_that_can_be_converted_into_mx
+      description: Get Assets That Can Be Converted Into MX
+      parameters:
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/capital/convert:
+    post:
+      tags:
+      - Wallet
+      summary: Dust Transfer
+      operationId: dust_transfer
+      description: Dust Transfer
+      parameters:
+      - name: asset
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+    get:
+      tags:
+      - Wallet
+      summary: DustLog
+      operationId: dustlog
+      description: DustLog
+      parameters:
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-MEXC-APIKEY

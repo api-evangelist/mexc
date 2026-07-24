@@ -1,0 +1,32 @@
+openapi: 3.0.3
+info:
+  title: MEXC Futures REST API v1 Accounts and Transactions EFT API
+  description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
+  version: 1.0.0
+servers:
+- url: https://contract.mexc.com
+tags:
+- name: EFT
+paths:
+  /api/v3/etf/info:
+    get:
+      tags:
+      - EFT
+      summary: ETF info
+      operationId: etf_info
+      description: ETF info
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-MEXC-APIKEY

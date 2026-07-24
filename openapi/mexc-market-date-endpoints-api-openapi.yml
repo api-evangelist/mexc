@@ -1,0 +1,272 @@
+openapi: 3.0.3
+info:
+  title: MEXC Futures REST API v1 Accounts and Transactions Market Date Endpoints API
+  description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
+  version: 1.0.0
+servers:
+- url: https://contract.mexc.com
+tags:
+- name: Market Date Endpoints
+paths:
+  /api/v3/ping:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Test Connectivity
+      operationId: test_connectivity
+      description: Test Connectivity
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/time:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Check Server Time
+      operationId: check_server_time
+      description: Check Server Time
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/exchangeInfo:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Exchange Information
+      operationId: exchange_information
+      description: Exchange Information
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/depth:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Order Book
+      operationId: order_book
+      description: Order Book
+      parameters:
+      - name: symbol
+        in: query
+        description: Symbol
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/trades:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Recent Trades List
+      operationId: recent_trades_list
+      description: Recent Trades List
+      parameters:
+      - name: symbol
+        in: query
+        description: Symbol
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/historicalTrades:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Old Trade Lookup
+      operationId: old_trade_lookup
+      description: Old Trade Lookup
+      parameters:
+      - name: symbol
+        in: query
+        description: Symbol
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/aggTrades:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Compressed/Aggregate Trades List
+      operationId: compressed_aggregate_trades_list
+      description: Compressed/Aggregate Trades List
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/klines:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Kline/Candlestick Data
+      operationId: kline_candlestick_data
+      description: Kline/Candlestick Data
+      parameters:
+      - name: symbol
+        in: query
+        description: Symbol
+        required: false
+        schema:
+          type: string
+      - name: interval
+        in: query
+        description: 'ENUM: Kline interval'
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/avgPrice:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Current Average Price
+      operationId: current_average_price
+      description: Current Average Price
+      parameters:
+      - name: symbol
+        in: query
+        description: Symbol
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/ticker/24hr:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: 24hr Ticker Price Change Statistics
+      operationId: 24hr_ticker_price_change_statistics
+      description: 24hr Ticker Price Change Statistics
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/ticker/price:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Symbol Price Ticker
+      operationId: symbol_price_ticker
+      description: Symbol Price Ticker
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/ticker/bookTicker:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Symbol Order Book Ticker
+      operationId: symbol_order_book_ticker
+      description: Symbol Order Book Ticker
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/defaultSymbols:
+    get:
+      tags:
+      - Market Date Endpoints
+      summary: Default Symbols
+      operationId: default_symbols
+      description: Default Symbols
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-MEXC-APIKEY

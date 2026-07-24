@@ -1,0 +1,284 @@
+openapi: 3.0.3
+info:
+  title: MEXC Futures REST API v1 Accounts and Transactions Quote API
+  description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
+  version: 1.0.0
+servers:
+- url: https://contract.mexc.com
+tags:
+- name: Quote
+paths:
+  /api/v1/contract/ping:
+    get:
+      tags:
+      - Quote
+      summary: Ping
+      operationId: ping
+      description: Ping
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v1/contract/detail:
+    get:
+      tags:
+      - Quote
+      summary: ContractDetail
+      operationId: contractdetail
+      description: ContractDetail
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v1/contract/support_currencies:
+    get:
+      tags:
+      - Quote
+      summary: DepthBySymbol
+      operationId: depthbysymbol
+      description: DepthBySymbol
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v1/contract/depth_commits/BTC_USDT/20:
+    get:
+      tags:
+      - Quote
+      summary: FundingRateBySymbol
+      operationId: fundingratebysymbol
+      description: FundingRateBySymbol
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v1/contract/kline/BTC_USDT:
+    get:
+      tags:
+      - Quote
+      summary: KlineBySymbol
+      operationId: klinebysymbol
+      description: KlineBySymbol
+      parameters:
+      - name: interval
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: start
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: end
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v1/contract/kline/index_price/BTC_USDT:
+    get:
+      tags:
+      - Quote
+      summary: IndexPriceKlineBySymbol
+      operationId: indexpriceklinebysymbol
+      description: IndexPriceKlineBySymbol
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v1/contract/kline/fair_price/BTC_USDT:
+    get:
+      tags:
+      - Quote
+      summary: FairPriceKlineBySymbol
+      operationId: fairpriceklinebysymbol
+      description: FairPriceKlineBySymbol
+      parameters:
+      - name: interval
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: start
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: end
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v1/contract/deals/BTC_USDT:
+    get:
+      tags:
+      - Quote
+      summary: DealsBySymbol
+      operationId: dealsbysymbol
+      description: DealsBySymbol
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v1/contract/ticker:
+    get:
+      tags:
+      - Quote
+      summary: Ticker
+      operationId: ticker
+      description: Ticker
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v1/contract/risk_reverse:
+    get:
+      tags:
+      - Quote
+      summary: RiskReverse
+      operationId: riskreverse
+      description: RiskReverse
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v1/contract/risk_reverse/history:
+    get:
+      tags:
+      - Quote
+      summary: RiskReverseHistory
+      operationId: riskreversehistory
+      description: RiskReverseHistory
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: page_num
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: page_size
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v1/contract/funding_rate/history:
+    get:
+      tags:
+      - Quote
+      summary: FundingRateHistory
+      operationId: fundingratehistory
+      description: FundingRateHistory
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: page_num
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: page_size
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-MEXC-APIKEY

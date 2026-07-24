@@ -1,0 +1,832 @@
+openapi: 3.0.3
+info:
+  title: MEXC Futures REST API v1 Accounts and Transactions Margin API
+  description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
+  version: 1.0.0
+servers:
+- url: https://contract.mexc.com
+tags:
+- name: Margin
+paths:
+  /api/v3/margin/tradeMode:
+    post:
+      tags:
+      - Margin
+      summary: Change Trade Mode
+      operationId: change_trade_mode
+      description: Change Trade Mode
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: tradeMode
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/order:
+    post:
+      tags:
+      - Margin
+      summary: Margin Account New Order
+      operationId: margin_account_new_order
+      description: Margin Account New Order
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: side
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: type
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: quantity
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: price
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+    delete:
+      tags:
+      - Margin
+      summary: Margin Account Cancel Order
+      operationId: margin_account_cancel_order
+      description: Margin Account Cancel Order
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: orderId
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+    get:
+      tags:
+      - Margin
+      summary: Query Margin Account's order
+      operationId: query_margin_account_s_order
+      description: Query Margin Account's order
+      parameters:
+      - name: orderId
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/loan:
+    post:
+      tags:
+      - Margin
+      summary: Margin Account Borrow
+      operationId: margin_account_borrow
+      description: Margin Account Borrow
+      parameters:
+      - name: asset
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: isIsolated
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: amount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+    get:
+      tags:
+      - Margin
+      summary: Query Loan Record
+      operationId: query_loan_record
+      description: Query Loan Record
+      parameters:
+      - name: asset
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/repay:
+    post:
+      tags:
+      - Margin
+      summary: Margin Account Repay
+      operationId: margin_account_repay
+      description: Margin Account Repay
+      parameters:
+      - name: asset
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: amount
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: borrowId
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+    get:
+      tags:
+      - Margin
+      summary: Query Repay Record
+      operationId: query_repay_record
+      description: Query Repay Record
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: asset
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/openOrders:
+    delete:
+      tags:
+      - Margin
+      summary: Margin Account Cancel all Open Orders on a Symbol
+      operationId: margin_account_cancel_all_open_orders_on_a_symbol
+      description: Margin Account Cancel all Open Orders on a Symbol
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+    get:
+      tags:
+      - Margin
+      summary: Query Margin Account's Open Order
+      operationId: query_margin_account_s_open_order
+      description: Query Margin Account's Open Order
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/allOrders:
+    get:
+      tags:
+      - Margin
+      summary: Query Margin Account's All Order
+      operationId: query_margin_account_s_all_order
+      description: Query Margin Account's All Order
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/myTrades:
+    get:
+      tags:
+      - Margin
+      summary: Query Margin Account's Trade List
+      operationId: query_margin_account_s_trade_list
+      description: Query Margin Account's Trade List
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/maxTransferable:
+    get:
+      tags:
+      - Margin
+      summary: Query Margin Account's maxTransferable
+      operationId: query_margin_account_s_maxtransferable
+      description: Query Margin Account's maxTransferable
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: asset
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/priceIndex:
+    get:
+      tags:
+      - Margin
+      summary: Query Margin Account's priceIndex
+      operationId: query_margin_account_s_priceindex
+      description: Query Margin Account's priceIndex
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/isolated/account:
+    get:
+      tags:
+      - Margin
+      summary: Query Isolated Margin Account Info
+      operationId: query_isolated_margin_account_info
+      description: Query Isolated Margin Account Info
+      parameters:
+      - name: symbols
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: recvWindow
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/trigerOrder:
+    get:
+      tags:
+      - Margin
+      summary: Query Margin Account's trigerOrder
+      operationId: query_margin_account_s_trigerorder
+      description: Query Margin Account's trigerOrder
+      parameters:
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/maxBorrowable:
+    get:
+      tags:
+      - Margin
+      summary: Query Margin Account's maxBorrowable
+      operationId: query_margin_account_s_maxborrowable
+      description: Query Margin Account's maxBorrowable
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: asset
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/isolated/pair:
+    get:
+      tags:
+      - Margin
+      summary: Query Solated Pair
+      operationId: query_solated_pair
+      description: Query Solated Pair
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+  /api/v3/margin/forceLiquidationRec:
+    get:
+      tags:
+      - Margin
+      summary: Query forceLiquidationRec
+      operationId: query_forceliquidationrec
+      description: Query forceLiquidationRec
+      parameters:
+      - name: symbol
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: timestamp
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      - name: signature
+        in: query
+        description: ''
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+      security:
+      - ApiKeyAuth: []
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-MEXC-APIKEY
