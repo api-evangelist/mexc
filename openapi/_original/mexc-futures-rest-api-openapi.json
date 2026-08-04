@@ -1,0 +1,2571 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "MEXC Futures REST API v1",
+    "description": "MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://contract.mexc.com"
+    }
+  ],
+  "paths": {
+    "/api/v1/contract/ping": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "Ping",
+        "operationId": "ping",
+        "description": "Ping",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/contract/detail": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "ContractDetail",
+        "operationId": "contractdetail",
+        "description": "ContractDetail",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/contract/support_currencies": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "DepthBySymbol",
+        "operationId": "depthbysymbol",
+        "description": "DepthBySymbol",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/contract/depth_commits/BTC_USDT/20": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "FundingRateBySymbol",
+        "operationId": "fundingratebysymbol",
+        "description": "FundingRateBySymbol",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/contract/kline/BTC_USDT": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "KlineBySymbol",
+        "operationId": "klinebysymbol",
+        "description": "KlineBySymbol",
+        "parameters": [
+          {
+            "name": "interval",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/contract/kline/index_price/BTC_USDT": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "IndexPriceKlineBySymbol",
+        "operationId": "indexpriceklinebysymbol",
+        "description": "IndexPriceKlineBySymbol",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/contract/kline/fair_price/BTC_USDT": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "FairPriceKlineBySymbol",
+        "operationId": "fairpriceklinebysymbol",
+        "description": "FairPriceKlineBySymbol",
+        "parameters": [
+          {
+            "name": "interval",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/contract/deals/BTC_USDT": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "DealsBySymbol",
+        "operationId": "dealsbysymbol",
+        "description": "DealsBySymbol",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/contract/ticker": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "Ticker",
+        "operationId": "ticker",
+        "description": "Ticker",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/contract/risk_reverse": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "RiskReverse",
+        "operationId": "riskreverse",
+        "description": "RiskReverse",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/contract/risk_reverse/history": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "RiskReverseHistory",
+        "operationId": "riskreversehistory",
+        "description": "RiskReverseHistory",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_num",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/contract/funding_rate/history": {
+      "get": {
+        "tags": [
+          "Quote"
+        ],
+        "summary": "FundingRateHistory",
+        "operationId": "fundingratehistory",
+        "description": "FundingRateHistory",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_num",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/assets": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "Assets",
+        "operationId": "assets",
+        "description": "Assets",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/asset/USDT": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "AssetByCurrency",
+        "operationId": "assetbycurrency",
+        "description": "AssetByCurrency",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/transfer_record": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "TransferRecord",
+        "operationId": "transferrecord",
+        "description": "TransferRecord",
+        "parameters": [
+          {
+            "name": "page_num",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/position/list/history_positions": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "FundingRecords",
+        "operationId": "fundingrecords",
+        "description": "FundingRecords",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/open_orders/": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "OpenOrders",
+        "operationId": "openorders",
+        "description": "OpenOrders",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/close_orders": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "open orders",
+        "operationId": "open_orders",
+        "description": "open orders",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/list/history_orders": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "HistoryOrders",
+        "operationId": "historyorders",
+        "description": "HistoryOrders",
+        "parameters": [
+          {
+            "name": "page_num",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/external/BTC_USDT/_m_b0ecfa1ea7a248be84f5a08cc5f98aa5": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "ExternalByExternalOid",
+        "operationId": "externalbyexternaloid",
+        "description": "ExternalByExternalOid",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/get/218699511659380224": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "QueryOrderById",
+        "operationId": "queryorderbyid",
+        "description": "QueryOrderById",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/batch_query": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "BatchQueryById",
+        "operationId": "batchquerybyid",
+        "description": "BatchQueryById",
+        "parameters": [
+          {
+            "name": "order_ids",
+            "in": "query",
+            "description": "order number array\uff0ccan be separated by \",\" for example :order_ids = 1,2,3(maximum 50 orders):",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/deal_details/2543756756876": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "DealDetails",
+        "operationId": "dealdetails",
+        "description": "DealDetails",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/list/order_deals/v3": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "orderDeals",
+        "operationId": "orderdeals",
+        "description": "orderDeals",
+        "parameters": [
+          {
+            "name": "page_num",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/planorder/list/orders": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "PlanOrder",
+        "operationId": "planorder",
+        "description": "PlanOrder",
+        "parameters": [
+          {
+            "name": "page_num",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/planorder/change_price": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "ChangePlanOrderStopOrder",
+        "operationId": "changeplanorderstoporder",
+        "description": "ChangePlanOrderStopOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/stoporder/open_orders": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "StopOrderOpenOrders",
+        "operationId": "stoporderopenorders",
+        "description": "StopOrderOpenOrders",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/stoporder/list/orders": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "StoporderOpenOrder",
+        "operationId": "stoporderopenorder",
+        "description": "StoporderOpenOrder",
+        "parameters": [
+          {
+            "name": "page_num",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/risk_limit": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "RiskLimit",
+        "operationId": "risklimit",
+        "description": "RiskLimit",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/tiered_fee_rate": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "TieredFeeRate",
+        "operationId": "tieredfeerate",
+        "description": "TieredFeeRate",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/position/change_margin": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "ChangeMargin",
+        "operationId": "changemargin",
+        "description": "ChangeMargin",
+        "parameters": [
+          {
+            "name": "positionId",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "amount",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "type ,ADD: increase,SUB: decrease",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/position/change_auto_add_im": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "ChangeAutoAddIm",
+        "operationId": "changeautoaddim",
+        "description": "ChangeAutoAddIm",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/position/leverage": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "Open order total count",
+        "operationId": "open_order_total_count",
+        "description": "Open order total count",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/position/change_leverage": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "ChangeLeverage",
+        "operationId": "changeleverage",
+        "description": "ChangeLeverage",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/position/change_position_mode": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "ChangePositionMode",
+        "operationId": "changepositionmode",
+        "description": "ChangePositionMode",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/position/reverse": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "PositionReverse",
+        "operationId": "positionreverse",
+        "description": "PositionReverse",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "positionId",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "vol",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/position/close_all": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "PositionCloseAll",
+        "operationId": "positioncloseall",
+        "description": "PositionCloseAll",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/create": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "PlaceNewOrder",
+        "operationId": "placeneworder",
+        "description": "PlaceNewOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/stoporder/place": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "ChangeLimitOrder",
+        "operationId": "changelimitorder",
+        "description": "ChangeLimitOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/chase_limit_order": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "chase limit order",
+        "operationId": "chase_limit_order",
+        "description": "chase limit order",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/planorder/place/v2": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "PlacePlanOrder",
+        "operationId": "placeplanorder",
+        "description": "PlacePlanOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/submit_batch": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "PlaceNewOrderBatch",
+        "operationId": "placeneworderbatch",
+        "description": "PlaceNewOrderBatch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/cancel": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "CancelOrderById",
+        "operationId": "cancelorderbyid",
+        "description": "CancelOrderById",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/cancel_with_external": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "CancelWithExternalBatch",
+        "operationId": "cancelwithexternalbatch",
+        "description": "CancelWithExternalBatch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/cancel_all": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "CancelAll",
+        "operationId": "cancelall",
+        "description": "CancelAll",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/order/batch_query_with_external": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "batch query with external",
+        "operationId": "batch_query_with_external",
+        "description": "batch query with external",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/change_risk_level": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "change risk level",
+        "operationId": "change_risk_level",
+        "description": "change risk level",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/planorder/cancel": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "CancelPlanOrder",
+        "operationId": "cancelplanorder",
+        "description": "CancelPlanOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/planorder/cancel_all": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "CancelAllPlanOrder",
+        "operationId": "cancelallplanorder",
+        "description": "CancelAllPlanOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/stoporder/cancel": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "CancelStopOrder",
+        "operationId": "cancelstoporder",
+        "description": "CancelStopOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/stoporder/cancel_all": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "CancelAllStopOrder",
+        "operationId": "cancelallstoporder",
+        "description": "CancelAllStopOrder",
+        "requestBody": {
+          "content": {
+            "text/plain": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/stoporder/change_price": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "StoporderChangePrice",
+        "operationId": "stoporderchangeprice",
+        "description": "StoporderChangePrice",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/stoporder/change_plan_price": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "StopOrderChangePlanPrice",
+        "operationId": "stoporderchangeplanprice",
+        "description": "StopOrderChangePlanPrice",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/trackorder/place": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "ChangeTrackOrder",
+        "operationId": "changetrackorder",
+        "description": "ChangeTrackOrder",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/trackorder/list/orders": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "Gettrackorder",
+        "operationId": "gettrackorder",
+        "description": "Gettrackorder",
+        "parameters": [
+          {
+            "name": "states",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/profit_rate/1": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "profit rate",
+        "operationId": "profit_rate",
+        "description": "profit rate",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/asset/analysis/1": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "asset analysis",
+        "operationId": "asset_analysis",
+        "description": "asset analysis",
+        "parameters": [
+          {
+            "name": "currency",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/feeDeductConfigs": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "feeDeductConfigs",
+        "operationId": "feedeductconfigs",
+        "description": "feeDeductConfigs",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/asset/analysis/yesterday_pnl": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "yesterday pnl",
+        "operationId": "yesterday_pnl",
+        "description": "yesterday pnl",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/asset/analysis/v3": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "asset analysis",
+        "operationId": "asset_analysis",
+        "description": "asset analysis",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/asset/analysis/calendar/daily/v3": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "analysis calendar daily",
+        "operationId": "analysis_calendar_daily",
+        "description": "analysis calendar daily",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/asset/analysis/calendar/monthly/v3": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "analysis calendar monthly",
+        "operationId": "analysis_calendar_monthly",
+        "description": "analysis calendar monthly",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/asset/analysis/recent/v3": {
+      "post": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "asset analysis recent",
+        "operationId": "asset_analysis_recent",
+        "description": "asset analysis recent",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/asset/analysis/today_pnl": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "analysis today pnl",
+        "operationId": "analysis_today_pnl",
+        "description": "analysis today pnl",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/config/contractFeeDiscountConfig": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "contractFeeDiscountConfig",
+        "operationId": "contractfeediscountconfig",
+        "description": "contractFeeDiscountConfig",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/discountType": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "discountType",
+        "operationId": "discounttype",
+        "description": "discountType",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/asset/analysis/export": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "analysis export",
+        "operationId": "analysis_export",
+        "description": "analysis export",
+        "parameters": [
+          {
+            "name": "timezone-login",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/contract/fee_rate": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "fee rate",
+        "operationId": "fee_rate",
+        "description": "fee rate",
+        "parameters": [
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page_size",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/asset_book/order_deal_fee/total": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "order deal fee total",
+        "operationId": "order_deal_fee_total",
+        "description": "order deal fee total",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/contract/zero_fee_rate": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "zero fee rate",
+        "operationId": "zero_fee_rate",
+        "description": "zero fee rate",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/private/account/preferred_symbols": {
+      "get": {
+        "tags": [
+          "Accounts and Transactions"
+        ],
+        "summary": "preferred symbols",
+        "operationId": "preferred_symbols",
+        "description": "preferred symbols",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "ApiKeyAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-MEXC-APIKEY"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "provider": "mexc",
+  "sources": [
+    "mexc-accounts-and-transactions-api-openapi.yml",
+    "mexc-eft-api-openapi.yml",
+    "mexc-margin-api-openapi.yml",
+    "mexc-market-date-endpoints-api-openapi.yml",
+    "mexc-parent-child-account-api-openapi.yml",
+    "mexc-quote-api-openapi.yml",
+    "mexc-rebate-api-openapi.yml",
+    "mexc-spot-account-trade-api-openapi.yml",
+    "mexc-wallet-api-openapi.yml"
+  ],
+  "outputs": [
+    "mexc-accounts-and-transactions-api-openapi.yml",
+    "mexc-eft-api-openapi.yml",
+    "mexc-margin-api-openapi.yml",
+    "mexc-market-date-endpoints-api-openapi.yml",
+    "mexc-parent-child-account-api-openapi.yml",
+    "mexc-quote-api-openapi.yml",
+    "mexc-rebate-api-openapi.yml",
+    "mexc-spot-account-trade-api-openapi.yml",
+    "mexc-wallet-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
