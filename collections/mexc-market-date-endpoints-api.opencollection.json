@@ -1,0 +1,292 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MEXC Futures REST API v1 Accounts and Transactions Market Date Endpoints API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Market Date Endpoints",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Test Connectivity",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/ping",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Test Connectivity"
+        },
+        {
+          "info": {
+            "name": "Check Server Time",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/time",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Check Server Time"
+        },
+        {
+          "info": {
+            "name": "Exchange Information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/exchangeInfo",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Exchange Information"
+        },
+        {
+          "info": {
+            "name": "Order Book",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/depth",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Order Book"
+        },
+        {
+          "info": {
+            "name": "Recent Trades List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/trades",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Recent Trades List"
+        },
+        {
+          "info": {
+            "name": "Old Trade Lookup",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/historicalTrades",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Old Trade Lookup"
+        },
+        {
+          "info": {
+            "name": "Compressed/Aggregate Trades List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/aggTrades",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Compressed/Aggregate Trades List"
+        },
+        {
+          "info": {
+            "name": "Kline/Candlestick Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/klines",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              },
+              {
+                "name": "interval",
+                "value": "",
+                "type": "query",
+                "description": "ENUM: Kline interval"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Kline/Candlestick Data"
+        },
+        {
+          "info": {
+            "name": "Current Average Price",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/avgPrice",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Current Average Price"
+        },
+        {
+          "info": {
+            "name": "24hr Ticker Price Change Statistics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/ticker/24hr",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "24hr Ticker Price Change Statistics"
+        },
+        {
+          "info": {
+            "name": "Symbol Price Ticker",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/ticker/price",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Symbol Price Ticker"
+        },
+        {
+          "info": {
+            "name": "Symbol Order Book Ticker",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/ticker/bookTicker",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Symbol Order Book Ticker"
+        },
+        {
+          "info": {
+            "name": "Default Symbols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/defaultSymbols",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Default Symbols"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,1284 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MEXC Futures REST API v1 Accounts and Transactions API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Accounts and Transactions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Assets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/assets",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Assets"
+        },
+        {
+          "info": {
+            "name": "AssetByCurrency",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/asset/USDT",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "AssetByCurrency"
+        },
+        {
+          "info": {
+            "name": "TransferRecord",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/transfer_record",
+            "params": [
+              {
+                "name": "page_num",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "TransferRecord"
+        },
+        {
+          "info": {
+            "name": "FundingRecords",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/position/list/history_positions",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "FundingRecords"
+        },
+        {
+          "info": {
+            "name": "OpenOrders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/order/open_orders/",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "OpenOrders"
+        },
+        {
+          "info": {
+            "name": "open orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/order/close_orders",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "open orders"
+        },
+        {
+          "info": {
+            "name": "HistoryOrders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/order/list/history_orders",
+            "params": [
+              {
+                "name": "page_num",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "HistoryOrders"
+        },
+        {
+          "info": {
+            "name": "ExternalByExternalOid",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/order/external/BTC_USDT/_m_b0ecfa1ea7a248be84f5a08cc5f98aa5",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "ExternalByExternalOid"
+        },
+        {
+          "info": {
+            "name": "QueryOrderById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/order/get/218699511659380224",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "QueryOrderById"
+        },
+        {
+          "info": {
+            "name": "BatchQueryById",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/order/batch_query",
+            "params": [
+              {
+                "name": "order_ids",
+                "value": "",
+                "type": "query",
+                "description": "order number array，can be separated by \",\" for example :order_ids = 1,2,3(maximum 50 orders):"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "BatchQueryById"
+        },
+        {
+          "info": {
+            "name": "DealDetails",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/order/deal_details/2543756756876",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "DealDetails"
+        },
+        {
+          "info": {
+            "name": "orderDeals",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/order/list/order_deals/v3",
+            "params": [
+              {
+                "name": "page_num",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "orderDeals"
+        },
+        {
+          "info": {
+            "name": "PlanOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/planorder/list/orders",
+            "params": [
+              {
+                "name": "page_num",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "PlanOrder"
+        },
+        {
+          "info": {
+            "name": "ChangePlanOrderStopOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/planorder/change_price",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "ChangePlanOrderStopOrder"
+        },
+        {
+          "info": {
+            "name": "StopOrderOpenOrders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/stoporder/open_orders",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "StopOrderOpenOrders"
+        },
+        {
+          "info": {
+            "name": "StoporderOpenOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/stoporder/list/orders",
+            "params": [
+              {
+                "name": "page_num",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "StoporderOpenOrder"
+        },
+        {
+          "info": {
+            "name": "RiskLimit",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/risk_limit",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "RiskLimit"
+        },
+        {
+          "info": {
+            "name": "TieredFeeRate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/tiered_fee_rate",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "TieredFeeRate"
+        },
+        {
+          "info": {
+            "name": "ChangeMargin",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/position/change_margin",
+            "params": [
+              {
+                "name": "positionId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "amount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "type ,ADD: increase,SUB: decrease"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "ChangeMargin"
+        },
+        {
+          "info": {
+            "name": "ChangeAutoAddIm",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/position/change_auto_add_im",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "ChangeAutoAddIm"
+        },
+        {
+          "info": {
+            "name": "Open order total count",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/position/leverage",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Open order total count"
+        },
+        {
+          "info": {
+            "name": "ChangeLeverage",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/position/change_leverage",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "ChangeLeverage"
+        },
+        {
+          "info": {
+            "name": "ChangePositionMode",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/position/change_position_mode",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "ChangePositionMode"
+        },
+        {
+          "info": {
+            "name": "PositionReverse",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/position/reverse",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "positionId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "vol",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "PositionReverse"
+        },
+        {
+          "info": {
+            "name": "PositionCloseAll",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/position/close_all",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "PositionCloseAll"
+        },
+        {
+          "info": {
+            "name": "PlaceNewOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/order/create",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "PlaceNewOrder"
+        },
+        {
+          "info": {
+            "name": "ChangeLimitOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/stoporder/place",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "ChangeLimitOrder"
+        },
+        {
+          "info": {
+            "name": "chase limit order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/order/chase_limit_order",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "chase limit order"
+        },
+        {
+          "info": {
+            "name": "PlacePlanOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/planorder/place/v2",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "PlacePlanOrder"
+        },
+        {
+          "info": {
+            "name": "PlaceNewOrderBatch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/order/submit_batch",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "PlaceNewOrderBatch"
+        },
+        {
+          "info": {
+            "name": "CancelOrderById",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/order/cancel",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "CancelOrderById"
+        },
+        {
+          "info": {
+            "name": "CancelWithExternalBatch",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/order/cancel_with_external",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "CancelWithExternalBatch"
+        },
+        {
+          "info": {
+            "name": "CancelAll",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/order/cancel_all",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "CancelAll"
+        },
+        {
+          "info": {
+            "name": "batch query with external",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/order/batch_query_with_external",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "batch query with external"
+        },
+        {
+          "info": {
+            "name": "change risk level",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/account/change_risk_level",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "change risk level"
+        },
+        {
+          "info": {
+            "name": "CancelPlanOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/planorder/cancel",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "CancelPlanOrder"
+        },
+        {
+          "info": {
+            "name": "CancelAllPlanOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/planorder/cancel_all",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "CancelAllPlanOrder"
+        },
+        {
+          "info": {
+            "name": "CancelStopOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/stoporder/cancel",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "CancelStopOrder"
+        },
+        {
+          "info": {
+            "name": "CancelAllStopOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/stoporder/cancel_all",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "CancelAllStopOrder"
+        },
+        {
+          "info": {
+            "name": "StoporderChangePrice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/stoporder/change_price",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "StoporderChangePrice"
+        },
+        {
+          "info": {
+            "name": "StopOrderChangePlanPrice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/stoporder/change_plan_price",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "StopOrderChangePlanPrice"
+        },
+        {
+          "info": {
+            "name": "ChangeTrackOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/trackorder/place",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "ChangeTrackOrder"
+        },
+        {
+          "info": {
+            "name": "Gettrackorder",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/trackorder/list/orders",
+            "params": [
+              {
+                "name": "states",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Gettrackorder"
+        },
+        {
+          "info": {
+            "name": "profit rate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/profit_rate/1",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "profit rate"
+        },
+        {
+          "info": {
+            "name": "asset analysis",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/asset/analysis/1",
+            "params": [
+              {
+                "name": "currency",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "asset analysis"
+        },
+        {
+          "info": {
+            "name": "feeDeductConfigs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/feeDeductConfigs",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "feeDeductConfigs"
+        },
+        {
+          "info": {
+            "name": "yesterday pnl",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/asset/analysis/yesterday_pnl",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "yesterday pnl"
+        },
+        {
+          "info": {
+            "name": "asset analysis",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/account/asset/analysis/v3",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "asset analysis"
+        },
+        {
+          "info": {
+            "name": "analysis calendar daily",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/account/asset/analysis/calendar/daily/v3",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "analysis calendar daily"
+        },
+        {
+          "info": {
+            "name": "analysis calendar monthly",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/account/asset/analysis/calendar/monthly/v3",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "analysis calendar monthly"
+        },
+        {
+          "info": {
+            "name": "asset analysis recent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v1/private/account/asset/analysis/recent/v3",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "asset analysis recent"
+        },
+        {
+          "info": {
+            "name": "analysis today pnl",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/asset/analysis/today_pnl",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "analysis today pnl"
+        },
+        {
+          "info": {
+            "name": "contractFeeDiscountConfig",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/config/contractFeeDiscountConfig",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "contractFeeDiscountConfig"
+        },
+        {
+          "info": {
+            "name": "discountType",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/discountType",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "discountType"
+        },
+        {
+          "info": {
+            "name": "analysis export",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/asset/analysis/export",
+            "params": [
+              {
+                "name": "timezone-login",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "analysis export"
+        },
+        {
+          "info": {
+            "name": "fee rate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/contract/fee_rate",
+            "params": [
+              {
+                "name": "page_size",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "fee rate"
+        },
+        {
+          "info": {
+            "name": "order deal fee total",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/asset_book/order_deal_fee/total",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "order deal fee total"
+        },
+        {
+          "info": {
+            "name": "zero fee rate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/contract/zero_fee_rate",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "zero fee rate"
+        },
+        {
+          "info": {
+            "name": "preferred symbols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v1/private/account/preferred_symbols",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "preferred symbols"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

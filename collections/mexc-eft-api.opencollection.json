@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MEXC Futures REST API v1 Accounts and Transactions EFT API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "EFT",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "ETF info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/etf/info",
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "ETF info"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

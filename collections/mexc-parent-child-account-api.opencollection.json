@@ -1,0 +1,391 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MEXC Futures REST API v1 Accounts and Transactions Parent child account API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Parent child account",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "new virtualSubAccount",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/sub-account/virtualSubAccount",
+            "params": [
+              {
+                "name": "subAccount",
+                "value": "",
+                "type": "query",
+                "description": "subAccount"
+              },
+              {
+                "name": "note",
+                "value": "",
+                "type": "query",
+                "description": "remarks"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "new virtualSubAccount"
+        },
+        {
+          "info": {
+            "name": "Query sub-account list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/sub-account/list",
+            "params": [
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query sub-account list"
+        },
+        {
+          "info": {
+            "name": "Query sub-account apiKey",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/sub-account/apiKey",
+            "params": [
+              {
+                "name": "subAccount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query sub-account apiKey"
+        },
+        {
+          "info": {
+            "name": "new sub-account apiKey",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/sub-account/apiKey",
+            "params": [
+              {
+                "name": "subAccount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "note",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "permissions",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "new sub-account apiKey"
+        },
+        {
+          "info": {
+            "name": "Delete sub-account apiKey",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://contract.mexc.com/api/v3/sub-account/apiKey",
+            "params": [
+              {
+                "name": "subAccount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "apiKey",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Delete sub-account apiKey"
+        },
+        {
+          "info": {
+            "name": "Query Sub-account UniversalTransfer Record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/capital/sub-account/universalTransfer",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fromAccountType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "toAccountType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "toAccount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Sub-account UniversalTransfer Record"
+        },
+        {
+          "info": {
+            "name": "Sub-account UniversalTransfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/capital/sub-account/universalTransfer",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "amount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fromAccountType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fromAccount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "toAccountType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "toAccount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "clientTranId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Sub-account UniversalTransfer"
+        },
+        {
+          "info": {
+            "name": "Enable Futures For Sub-account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/sub-account/futures",
+            "params": [
+              {
+                "name": "subAccount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Enable Futures For Sub-account"
+        },
+        {
+          "info": {
+            "name": "Enable Margin For Sub-account",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/sub-account/margin",
+            "params": [
+              {
+                "name": "subAccount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Enable Margin For Sub-account"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

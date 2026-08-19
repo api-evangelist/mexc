@@ -1,0 +1,492 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MEXC Futures REST API v1 Accounts and Transactions Spot Account/Trade API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Spot Account/Trade",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Test New Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/order/test",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              },
+              {
+                "name": "side",
+                "value": "",
+                "type": "query",
+                "description": "ENUM：Order Side"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "ENUM：Order Type"
+              },
+              {
+                "name": "quantity",
+                "value": "",
+                "type": "query",
+                "description": "Quantity"
+              },
+              {
+                "name": "price",
+                "value": "",
+                "type": "query",
+                "description": "Price"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Test New Order"
+        },
+        {
+          "info": {
+            "name": "Query Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/order",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              },
+              {
+                "name": "orderId",
+                "value": "",
+                "type": "query",
+                "description": "Order id"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Order"
+        },
+        {
+          "info": {
+            "name": "New Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/order",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              },
+              {
+                "name": "side",
+                "value": "",
+                "type": "query",
+                "description": "ENUM：Order Side"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "ENUM：Order Type "
+              },
+              {
+                "name": "quantity",
+                "value": "",
+                "type": "query",
+                "description": "Quantity"
+              },
+              {
+                "name": "price",
+                "value": "",
+                "type": "query",
+                "description": "Price"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": []
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "New Order"
+        },
+        {
+          "info": {
+            "name": "Cancel Orde",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://contract.mexc.com/api/v3/order",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              },
+              {
+                "name": "orderId",
+                "value": "",
+                "type": "query",
+                "description": "Order id"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Cancel Orde"
+        },
+        {
+          "info": {
+            "name": "Current Open Orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/openOrders",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Current Open Orders"
+        },
+        {
+          "info": {
+            "name": "Cancel all Open Orders on a Symbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://contract.mexc.com/api/v3/openOrders",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Cancel all Open Orders on a Symbol"
+        },
+        {
+          "info": {
+            "name": "All Orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/allOrders",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "All Orders"
+        },
+        {
+          "info": {
+            "name": "Account Information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/account",
+            "params": [
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Account Information"
+        },
+        {
+          "info": {
+            "name": "Account Trade List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/myTrades",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query",
+                "description": "Symbol"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Account Trade List"
+        },
+        {
+          "info": {
+            "name": "Query Self Symbols",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/selfSymbols",
+            "params": [
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Self Symbols"
+        },
+        {
+          "info": {
+            "name": "Query MxDeduct",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/mxDeduct/enable",
+            "params": [
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query MxDeduct"
+        },
+        {
+          "info": {
+            "name": "MxDeduct enable",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/mxDeduct/enable",
+            "params": [
+              {
+                "name": "mxDeductEnable",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "form-urlencoded",
+              "data": []
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "MxDeduct enable"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

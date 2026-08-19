@@ -1,0 +1,2721 @@
+{
+  "item": [
+    {
+      "id": "7174d112-fe0c-43a9-a3d2-ed78abfa3c57",
+      "name": "Margin",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d7e530d1-bc06-430c-a4b3-87cfff803ca6",
+          "name": "Change Trade Mode",
+          "request": {
+            "name": "Change Trade Mode",
+            "description": {
+              "content": "Change Trade Mode",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "tradeMode"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "tradeMode",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "recvWindow",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f61967d6-137b-473d-910c-3e5c6166ad72",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "tradeMode"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "tradeMode",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "recvWindow",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "93cb8336-4a7f-437f-9370-49f2be2ffe6b",
+          "name": "Margin Account New Order",
+          "request": {
+            "name": "Margin Account New Order",
+            "description": {
+              "content": "Margin Account New Order",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "order"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "side",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "type",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "quantity",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "price",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "recvWindow",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "11319c7b-32fe-4239-bc21-1ff8a8f4db17",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "side",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "type",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "quantity",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "price",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "recvWindow",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bf4e3b17-b089-4940-ae47-9d1f57fbacaa",
+          "name": "Margin Account Cancel Order",
+          "request": {
+            "name": "Margin Account Cancel Order",
+            "description": {
+              "content": "Margin Account Cancel Order",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "order"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "orderId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "recvWindow",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "62886407-52c4-4089-be23-35109f0374b2",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "orderId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "recvWindow",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6809d2fa-5d32-41bd-b254-ebe89b4b889e",
+          "name": "Query Margin Account's order",
+          "request": {
+            "name": "Query Margin Account's order",
+            "description": {
+              "content": "Query Margin Account's order",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "order"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "orderId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "recvWindow",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f34e32e4-72bb-4479-a586-768a2c646554",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "orderId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "recvWindow",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "06dd1742-0d24-4734-8847-912649d82a85",
+          "name": "Margin Account Borrow",
+          "request": {
+            "name": "Margin Account Borrow",
+            "description": {
+              "content": "Margin Account Borrow",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "loan"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "asset",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "isIsolated",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "amount",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "3046c4cd-37a2-4bba-b0de-4e8d37503140",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "loan"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "asset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "isIsolated",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "amount",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "48f29cf1-0e50-4505-bb99-7da6df5473c0",
+          "name": "Query Loan Record",
+          "request": {
+            "name": "Query Loan Record",
+            "description": {
+              "content": "Query Loan Record",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "loan"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "asset",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "8992450a-5140-42b6-90e8-aba947770b29",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "loan"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "asset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b69c2746-bcea-4655-9e55-771c26887ef9",
+          "name": "Margin Account Repay",
+          "request": {
+            "name": "Margin Account Repay",
+            "description": {
+              "content": "Margin Account Repay",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "repay"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "asset",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "amount",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "borrowId",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "recvWindow",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "47b54758-624f-4a06-a3d2-15ee1921e4e0",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "repay"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "asset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "amount",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "borrowId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "recvWindow",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1cdbb077-4d6d-4c90-a393-bc2107388411",
+          "name": "Query Repay Record",
+          "request": {
+            "name": "Query Repay Record",
+            "description": {
+              "content": "Query Repay Record",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "repay"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "asset",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "recvWindow",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "004c8fa6-f02f-4afc-bc7f-d7f5bb221ed0",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "repay"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "asset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "recvWindow",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b448df53-7f07-4e8b-be4b-d75328d8109a",
+          "name": "Margin Account Cancel all Open Orders on a Symbol",
+          "request": {
+            "name": "Margin Account Cancel all Open Orders on a Symbol",
+            "description": {
+              "content": "Margin Account Cancel all Open Orders on a Symbol",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "openOrders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ce8e7d67-605e-4da9-b014-d81e9292b3ef",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "openOrders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4d7211e0-abcf-4a50-809b-7e92dc2f014f",
+          "name": "Query Margin Account's Open Order",
+          "request": {
+            "name": "Query Margin Account's Open Order",
+            "description": {
+              "content": "Query Margin Account's Open Order",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "openOrders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "recvWindow",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1707fdea-5752-4b22-b06a-15cefe404984",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "openOrders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "recvWindow",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "081013e8-634c-438d-a986-667f160ce192",
+          "name": "Query Margin Account's All Order",
+          "request": {
+            "name": "Query Margin Account's All Order",
+            "description": {
+              "content": "Query Margin Account's All Order",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "allOrders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "recvWindow",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "f69d7b39-1ad5-49e0-963c-7216eff1d584",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "allOrders"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "recvWindow",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ef079dc3-a8c0-47f9-8e48-34c62cbfc1e3",
+          "name": "Query Margin Account's Trade List",
+          "request": {
+            "name": "Query Margin Account's Trade List",
+            "description": {
+              "content": "Query Margin Account's Trade List",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "myTrades"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "recvWindow",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "558746cb-1d81-44b6-b34f-392a55579cfd",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "myTrades"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "recvWindow",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "db0a99c6-cd69-4bcb-9f30-ab2fcaf59e60",
+          "name": "Query Margin Account's maxTransferable",
+          "request": {
+            "name": "Query Margin Account's maxTransferable",
+            "description": {
+              "content": "Query Margin Account's maxTransferable",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "maxTransferable"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "asset",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "5351155c-584c-4fc4-a6dc-91501a02b2dc",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "maxTransferable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "asset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f0ba5d9d-80cd-43b7-82b3-de8001ec6c41",
+          "name": "Query Margin Account's priceIndex",
+          "request": {
+            "name": "Query Margin Account's priceIndex",
+            "description": {
+              "content": "Query Margin Account's priceIndex",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "priceIndex"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "24242ca6-0034-4958-bcff-cdf4ca02135a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "priceIndex"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "163ef0ee-23d3-43e3-9a3f-94bd0309db06",
+          "name": "Query Isolated Margin Account Info",
+          "request": {
+            "name": "Query Isolated Margin Account Info",
+            "description": {
+              "content": "Query Isolated Margin Account Info",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "isolated",
+                "account"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbols",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "recvWindow",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1261ca4f-279a-457f-b62b-f4ae9b82af37",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "isolated",
+                    "account"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbols",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "recvWindow",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "571ccd36-a4c5-4689-8a22-f5e19ce57a0f",
+          "name": "Query Margin Account's trigerOrder",
+          "request": {
+            "name": "Query Margin Account's trigerOrder",
+            "description": {
+              "content": "Query Margin Account's trigerOrder",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "trigerOrder"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "b6409e37-2a92-4a53-9b34-fb48bd30dd85",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "trigerOrder"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3f5f1229-9181-422f-844a-909fa61ab4fd",
+          "name": "Query Margin Account's maxBorrowable",
+          "request": {
+            "name": "Query Margin Account's maxBorrowable",
+            "description": {
+              "content": "Query Margin Account's maxBorrowable",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "maxBorrowable"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "asset",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "37a49e3e-9aa7-4652-a828-61893469c5c4",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "maxBorrowable"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "asset",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d309a4c2-1d89-4f4c-b40e-3625bbe1791e",
+          "name": "Query Solated Pair",
+          "request": {
+            "name": "Query Solated Pair",
+            "description": {
+              "content": "Query Solated Pair",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "isolated",
+                "pair"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a1edeaa7-f0fd-4777-bf09-bfab0be97f9a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "isolated",
+                    "pair"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d19acdbb-a7e6-4b2a-9619-da0dab81925c",
+          "name": "Query forceLiquidationRec",
+          "request": {
+            "name": "Query forceLiquidationRec",
+            "description": {
+              "content": "Query forceLiquidationRec",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "api",
+                "v3",
+                "margin",
+                "forceLiquidationRec"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "symbol",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "signature",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-MEXC-APIKEY"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "26e29810-9c46-435a-bdf6-bdc6dbc2023a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v3",
+                    "margin",
+                    "forceLiquidationRec"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "symbol",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-MEXC-APIKEY",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://contract.mexc.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c99ac752-f1fd-476e-a97c-6b374fbdb981",
+    "name": "MEXC Futures REST API v1 Accounts and Transactions Margin API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.",
+      "type": "text/plain"
+    }
+  }
+}

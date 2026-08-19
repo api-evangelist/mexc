@@ -1,0 +1,154 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MEXC Futures REST API v1 Accounts and Transactions Rebate API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Rebate",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Rebate History Records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/rebate/taxQuery",
+            "params": [
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Get Rebate History Records"
+        },
+        {
+          "info": {
+            "name": "Get Rebate Records Detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/rebate/detail",
+            "params": [
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Get Rebate Records Detail"
+        },
+        {
+          "info": {
+            "name": "Get Self Rebate Records Detail",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/rebate/detail/kickback",
+            "params": [
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Get Self Rebate Records Detail"
+        },
+        {
+          "info": {
+            "name": "Query ReferCode",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/rebate/referCode",
+            "params": [
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query ReferCode"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

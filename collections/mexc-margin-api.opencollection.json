@@ -1,0 +1,794 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MEXC Futures REST API v1 Accounts and Transactions Margin API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Margin",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Change Trade Mode",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/margin/tradeMode",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "tradeMode",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Change Trade Mode"
+        },
+        {
+          "info": {
+            "name": "Query Margin Account's order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/order",
+            "params": [
+              {
+                "name": "orderId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Margin Account's order"
+        },
+        {
+          "info": {
+            "name": "Margin Account New Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/margin/order",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "side",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "quantity",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "price",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Margin Account New Order"
+        },
+        {
+          "info": {
+            "name": "Margin Account Cancel Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://contract.mexc.com/api/v3/margin/order",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "orderId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Margin Account Cancel Order"
+        },
+        {
+          "info": {
+            "name": "Query Loan Record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/loan",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Loan Record"
+        },
+        {
+          "info": {
+            "name": "Margin Account Borrow",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/margin/loan",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "isIsolated",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "amount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Margin Account Borrow"
+        },
+        {
+          "info": {
+            "name": "Query Repay Record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/repay",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "asset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Repay Record"
+        },
+        {
+          "info": {
+            "name": "Margin Account Repay",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/margin/repay",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "amount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "borrowId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Margin Account Repay"
+        },
+        {
+          "info": {
+            "name": "Query Margin Account's Open Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/openOrders",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Margin Account's Open Order"
+        },
+        {
+          "info": {
+            "name": "Margin Account Cancel all Open Orders on a Symbol",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://contract.mexc.com/api/v3/margin/openOrders",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Margin Account Cancel all Open Orders on a Symbol"
+        },
+        {
+          "info": {
+            "name": "Query Margin Account's All Order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/allOrders",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Margin Account's All Order"
+        },
+        {
+          "info": {
+            "name": "Query Margin Account's Trade List",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/myTrades",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Margin Account's Trade List"
+        },
+        {
+          "info": {
+            "name": "Query Margin Account's maxTransferable",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/maxTransferable",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "asset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Margin Account's maxTransferable"
+        },
+        {
+          "info": {
+            "name": "Query Margin Account's priceIndex",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/priceIndex",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Margin Account's priceIndex"
+        },
+        {
+          "info": {
+            "name": "Query Isolated Margin Account Info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/isolated/account",
+            "params": [
+              {
+                "name": "symbols",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "recvWindow",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Isolated Margin Account Info"
+        },
+        {
+          "info": {
+            "name": "Query Margin Account's trigerOrder",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/trigerOrder",
+            "params": [
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Margin Account's trigerOrder"
+        },
+        {
+          "info": {
+            "name": "Query Margin Account's maxBorrowable",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/maxBorrowable",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "asset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Margin Account's maxBorrowable"
+        },
+        {
+          "info": {
+            "name": "Query Solated Pair",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/isolated/pair",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Solated Pair"
+        },
+        {
+          "info": {
+            "name": "Query forceLiquidationRec",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/margin/forceLiquidationRec",
+            "params": [
+              {
+                "name": "symbol",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query forceLiquidationRec"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

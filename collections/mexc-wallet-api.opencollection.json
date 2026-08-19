@@ -1,0 +1,489 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "MEXC Futures REST API v1 Accounts and Transactions Wallet API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Wallet",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Withdraw Apply",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/capital/withdraw/apply",
+            "params": [
+              {
+                "name": "coin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "network",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "address",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "amount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Withdraw Apply"
+        },
+        {
+          "info": {
+            "name": "Query Deposit Hisrec",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/capital/deposit/hisrec",
+            "params": [
+              {
+                "name": "coin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Deposit Hisrec"
+        },
+        {
+          "info": {
+            "name": "Query All Coins",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/capital/config/getall",
+            "params": [
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query All Coins"
+        },
+        {
+          "info": {
+            "name": "Get Listen Key",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/broker/sub-account/apiKey",
+            "params": [
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            },
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Get Listen Key"
+        },
+        {
+          "info": {
+            "name": "Transfer Record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/capital/transfer",
+            "params": [
+              {
+                "name": "fromAccountType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "toAccountType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Transfer Record"
+        },
+        {
+          "info": {
+            "name": "Transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/capital/transfer",
+            "params": [
+              {
+                "name": "fromAccountType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "toAccountType",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "amount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "asset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Transfer"
+        },
+        {
+          "info": {
+            "name": "Withdraw History",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/capital/withdraw/history",
+            "params": [
+              {
+                "name": "coin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Withdraw History"
+        },
+        {
+          "info": {
+            "name": "Query Transfer By TranId",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/capital/transfer/tranId",
+            "params": [
+              {
+                "name": "tranId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Transfer By TranId"
+        },
+        {
+          "info": {
+            "name": "Query Deposit Address",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/capital/deposit/address",
+            "params": [
+              {
+                "name": "coin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "amount",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Query Deposit Address"
+        },
+        {
+          "info": {
+            "name": "Generate Deposit Address",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/capital/deposit/address",
+            "params": [
+              {
+                "name": "coin",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "network",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Generate Deposit Address"
+        },
+        {
+          "info": {
+            "name": "Get Assets That Can Be Converted Into MX",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/capital/convert/list",
+            "params": [
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Get Assets That Can Be Converted Into MX"
+        },
+        {
+          "info": {
+            "name": "DustLog",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://contract.mexc.com/api/v3/capital/convert",
+            "params": [
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "DustLog"
+        },
+        {
+          "info": {
+            "name": "Dust Transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://contract.mexc.com/api/v3/capital/convert",
+            "params": [
+              {
+                "name": "asset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "signature",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "auth": {
+              "type": "apikey",
+              "key": "X-MEXC-APIKEY",
+              "value": "{{X-MEXC-APIKEY}}",
+              "placement": "header"
+            }
+          },
+          "docs": "Dust Transfer"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
