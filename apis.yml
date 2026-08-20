@@ -61,6 +61,12 @@ apis:
   name: MEXC Broker API
   tags:
   - Account Management
+  - Brokers
+  - Cryptocurrency
+  - Enterprise
+  - Sub-Account
+  tags_raw:
+  - Account Management
   - Broker
   - Cryptocurrency
   - Enterprise
@@ -155,6 +161,8 @@ apis:
   humanURL: https://mexcdevelop.github.io/apidocs/spot_v3_en/
   baseURL: https://api.mexc.com
   tags:
+  - Quotes
+  tags_raw:
   - Quote
   properties:
   - type: OpenAPI
@@ -197,6 +205,8 @@ apis:
   humanURL: https://mexcdevelop.github.io/apidocs/spot_v3_en/
   baseURL: https://api.mexc.com
   tags:
+  - Wallets
+  tags_raw:
   - Wallet
   properties:
   - type: OpenAPI
