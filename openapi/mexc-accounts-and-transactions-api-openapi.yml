@@ -1,4 +1,4 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
   title: MEXC Futures REST API v1 Accounts and Transactions API
   description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
@@ -14,7 +14,6 @@ paths:
       - Accounts and Transactions
       summary: Assets
       operationId: assets
-      description: Assets
       responses:
         '200':
           description: Successful response
@@ -30,7 +29,6 @@ paths:
       - Accounts and Transactions
       summary: AssetByCurrency
       operationId: assetbycurrency
-      description: AssetByCurrency
       responses:
         '200':
           description: Successful response
@@ -46,7 +44,6 @@ paths:
       - Accounts and Transactions
       summary: TransferRecord
       operationId: transferrecord
-      description: TransferRecord
       parameters:
       - name: page_num
         in: query
@@ -75,7 +72,6 @@ paths:
       - Accounts and Transactions
       summary: FundingRecords
       operationId: fundingrecords
-      description: FundingRecords
       responses:
         '200':
           description: Successful response
@@ -91,7 +87,6 @@ paths:
       - Accounts and Transactions
       summary: OpenOrders
       operationId: openorders
-      description: OpenOrders
       responses:
         '200':
           description: Successful response
@@ -107,7 +102,6 @@ paths:
       - Accounts and Transactions
       summary: open orders
       operationId: open_orders
-      description: open orders
       responses:
         '200':
           description: Successful response
@@ -123,7 +117,6 @@ paths:
       - Accounts and Transactions
       summary: HistoryOrders
       operationId: historyorders
-      description: HistoryOrders
       parameters:
       - name: page_num
         in: query
@@ -158,7 +151,6 @@ paths:
       - Accounts and Transactions
       summary: ExternalByExternalOid
       operationId: externalbyexternaloid
-      description: ExternalByExternalOid
       responses:
         '200':
           description: Successful response
@@ -174,7 +166,6 @@ paths:
       - Accounts and Transactions
       summary: QueryOrderById
       operationId: queryorderbyid
-      description: QueryOrderById
       responses:
         '200':
           description: Successful response
@@ -190,7 +181,6 @@ paths:
       - Accounts and Transactions
       summary: BatchQueryById
       operationId: batchquerybyid
-      description: BatchQueryById
       parameters:
       - name: order_ids
         in: query
@@ -213,7 +203,6 @@ paths:
       - Accounts and Transactions
       summary: DealDetails
       operationId: dealdetails
-      description: DealDetails
       responses:
         '200':
           description: Successful response
@@ -229,7 +218,6 @@ paths:
       - Accounts and Transactions
       summary: orderDeals
       operationId: orderdeals
-      description: orderDeals
       parameters:
       - name: page_num
         in: query
@@ -264,7 +252,6 @@ paths:
       - Accounts and Transactions
       summary: PlanOrder
       operationId: planorder
-      description: PlanOrder
       parameters:
       - name: page_num
         in: query
@@ -293,7 +280,6 @@ paths:
       - Accounts and Transactions
       summary: ChangePlanOrderStopOrder
       operationId: changeplanorderstoporder
-      description: ChangePlanOrderStopOrder
       requestBody:
         content:
           application/json:
@@ -314,7 +300,6 @@ paths:
       - Accounts and Transactions
       summary: StopOrderOpenOrders
       operationId: stoporderopenorders
-      description: StopOrderOpenOrders
       responses:
         '200':
           description: Successful response
@@ -330,7 +315,6 @@ paths:
       - Accounts and Transactions
       summary: StoporderOpenOrder
       operationId: stoporderopenorder
-      description: StoporderOpenOrder
       parameters:
       - name: page_num
         in: query
@@ -359,7 +343,6 @@ paths:
       - Accounts and Transactions
       summary: RiskLimit
       operationId: risklimit
-      description: RiskLimit
       responses:
         '200':
           description: Successful response
@@ -375,7 +358,6 @@ paths:
       - Accounts and Transactions
       summary: TieredFeeRate
       operationId: tieredfeerate
-      description: TieredFeeRate
       parameters:
       - name: symbol
         in: query
@@ -398,7 +380,6 @@ paths:
       - Accounts and Transactions
       summary: ChangeMargin
       operationId: changemargin
-      description: ChangeMargin
       parameters:
       - name: positionId
         in: query
@@ -438,7 +419,6 @@ paths:
       - Accounts and Transactions
       summary: ChangeAutoAddIm
       operationId: changeautoaddim
-      description: ChangeAutoAddIm
       requestBody:
         content:
           application/json:
@@ -459,7 +439,6 @@ paths:
       - Accounts and Transactions
       summary: Open order total count
       operationId: open_order_total_count
-      description: Open order total count
       parameters:
       - name: symbol
         in: query
@@ -482,7 +461,6 @@ paths:
       - Accounts and Transactions
       summary: ChangeLeverage
       operationId: changeleverage
-      description: ChangeLeverage
       requestBody:
         content:
           application/json:
@@ -503,7 +481,6 @@ paths:
       - Accounts and Transactions
       summary: ChangePositionMode
       operationId: changepositionmode
-      description: ChangePositionMode
       requestBody:
         content:
           application/json:
@@ -524,7 +501,6 @@ paths:
       - Accounts and Transactions
       summary: PositionReverse
       operationId: positionreverse
-      description: PositionReverse
       parameters:
       - name: symbol
         in: query
@@ -564,7 +540,6 @@ paths:
       - Accounts and Transactions
       summary: PositionCloseAll
       operationId: positioncloseall
-      description: PositionCloseAll
       requestBody:
         content:
           application/json:
@@ -585,7 +560,6 @@ paths:
       - Accounts and Transactions
       summary: PlaceNewOrder
       operationId: placeneworder
-      description: PlaceNewOrder
       requestBody:
         content:
           application/json:
@@ -606,7 +580,6 @@ paths:
       - Accounts and Transactions
       summary: ChangeLimitOrder
       operationId: changelimitorder
-      description: ChangeLimitOrder
       requestBody:
         content:
           application/json:
@@ -627,7 +600,6 @@ paths:
       - Accounts and Transactions
       summary: chase limit order
       operationId: chase_limit_order
-      description: chase limit order
       requestBody:
         content:
           application/json:
@@ -648,7 +620,6 @@ paths:
       - Accounts and Transactions
       summary: PlacePlanOrder
       operationId: placeplanorder
-      description: PlacePlanOrder
       requestBody:
         content:
           application/json:
@@ -669,7 +640,6 @@ paths:
       - Accounts and Transactions
       summary: PlaceNewOrderBatch
       operationId: placeneworderbatch
-      description: PlaceNewOrderBatch
       requestBody:
         content:
           application/json:
@@ -690,7 +660,6 @@ paths:
       - Accounts and Transactions
       summary: CancelOrderById
       operationId: cancelorderbyid
-      description: CancelOrderById
       requestBody:
         content:
           application/json:
@@ -711,7 +680,6 @@ paths:
       - Accounts and Transactions
       summary: CancelWithExternalBatch
       operationId: cancelwithexternalbatch
-      description: CancelWithExternalBatch
       requestBody:
         content:
           application/json:
@@ -732,7 +700,6 @@ paths:
       - Accounts and Transactions
       summary: CancelAll
       operationId: cancelall
-      description: CancelAll
       requestBody:
         content:
           application/json:
@@ -753,7 +720,6 @@ paths:
       - Accounts and Transactions
       summary: batch query with external
       operationId: batch_query_with_external
-      description: batch query with external
       requestBody:
         content:
           application/json:
@@ -774,7 +740,6 @@ paths:
       - Accounts and Transactions
       summary: change risk level
       operationId: change_risk_level
-      description: change risk level
       requestBody:
         content:
           application/json:
@@ -795,7 +760,6 @@ paths:
       - Accounts and Transactions
       summary: CancelPlanOrder
       operationId: cancelplanorder
-      description: CancelPlanOrder
       requestBody:
         content:
           application/json:
@@ -816,7 +780,6 @@ paths:
       - Accounts and Transactions
       summary: CancelAllPlanOrder
       operationId: cancelallplanorder
-      description: CancelAllPlanOrder
       requestBody:
         content:
           application/json:
@@ -837,7 +800,6 @@ paths:
       - Accounts and Transactions
       summary: CancelStopOrder
       operationId: cancelstoporder
-      description: CancelStopOrder
       requestBody:
         content:
           application/json:
@@ -858,7 +820,6 @@ paths:
       - Accounts and Transactions
       summary: CancelAllStopOrder
       operationId: cancelallstoporder
-      description: CancelAllStopOrder
       requestBody:
         content:
           text/plain:
@@ -879,7 +840,6 @@ paths:
       - Accounts and Transactions
       summary: StoporderChangePrice
       operationId: stoporderchangeprice
-      description: StoporderChangePrice
       requestBody:
         content:
           application/json:
@@ -900,7 +860,6 @@ paths:
       - Accounts and Transactions
       summary: StopOrderChangePlanPrice
       operationId: stoporderchangeplanprice
-      description: StopOrderChangePlanPrice
       requestBody:
         content:
           application/json:
@@ -921,7 +880,6 @@ paths:
       - Accounts and Transactions
       summary: ChangeTrackOrder
       operationId: changetrackorder
-      description: ChangeTrackOrder
       requestBody:
         content:
           application/json:
@@ -942,7 +900,6 @@ paths:
       - Accounts and Transactions
       summary: Gettrackorder
       operationId: gettrackorder
-      description: Gettrackorder
       parameters:
       - name: states
         in: query
@@ -965,7 +922,6 @@ paths:
       - Accounts and Transactions
       summary: profit rate
       operationId: profit_rate
-      description: profit rate
       responses:
         '200':
           description: Successful response
@@ -981,7 +937,6 @@ paths:
       - Accounts and Transactions
       summary: asset analysis
       operationId: asset_analysis
-      description: asset analysis
       parameters:
       - name: currency
         in: query
@@ -1004,7 +959,6 @@ paths:
       - Accounts and Transactions
       summary: feeDeductConfigs
       operationId: feedeductconfigs
-      description: feeDeductConfigs
       responses:
         '200':
           description: Successful response
@@ -1020,7 +974,6 @@ paths:
       - Accounts and Transactions
       summary: yesterday pnl
       operationId: yesterday_pnl
-      description: yesterday pnl
       responses:
         '200':
           description: Successful response
@@ -1036,7 +989,6 @@ paths:
       - Accounts and Transactions
       summary: asset analysis
       operationId: asset_analysis
-      description: asset analysis
       requestBody:
         content:
           application/json:
@@ -1057,7 +1009,6 @@ paths:
       - Accounts and Transactions
       summary: analysis calendar daily
       operationId: analysis_calendar_daily
-      description: analysis calendar daily
       requestBody:
         content:
           application/json:
@@ -1078,7 +1029,6 @@ paths:
       - Accounts and Transactions
       summary: analysis calendar monthly
       operationId: analysis_calendar_monthly
-      description: analysis calendar monthly
       requestBody:
         content:
           application/json:
@@ -1099,7 +1049,6 @@ paths:
       - Accounts and Transactions
       summary: asset analysis recent
       operationId: asset_analysis_recent
-      description: asset analysis recent
       requestBody:
         content:
           application/json:
@@ -1120,7 +1069,6 @@ paths:
       - Accounts and Transactions
       summary: analysis today pnl
       operationId: analysis_today_pnl
-      description: analysis today pnl
       responses:
         '200':
           description: Successful response
@@ -1136,7 +1084,6 @@ paths:
       - Accounts and Transactions
       summary: contractFeeDiscountConfig
       operationId: contractfeediscountconfig
-      description: contractFeeDiscountConfig
       responses:
         '200':
           description: Successful response
@@ -1152,7 +1099,6 @@ paths:
       - Accounts and Transactions
       summary: discountType
       operationId: discounttype
-      description: discountType
       responses:
         '200':
           description: Successful response
@@ -1168,7 +1114,6 @@ paths:
       - Accounts and Transactions
       summary: analysis export
       operationId: analysis_export
-      description: analysis export
       parameters:
       - name: timezone-login
         in: query
@@ -1191,7 +1136,6 @@ paths:
       - Accounts and Transactions
       summary: fee rate
       operationId: fee_rate
-      description: fee rate
       parameters:
       - name: page_size
         in: query
@@ -1220,7 +1164,6 @@ paths:
       - Accounts and Transactions
       summary: order deal fee total
       operationId: order_deal_fee_total
-      description: order deal fee total
       responses:
         '200':
           description: Successful response
@@ -1236,7 +1179,6 @@ paths:
       - Accounts and Transactions
       summary: zero fee rate
       operationId: zero_fee_rate
-      description: zero fee rate
       responses:
         '200':
           description: Successful response
@@ -1252,7 +1194,6 @@ paths:
       - Accounts and Transactions
       summary: preferred symbols
       operationId: preferred_symbols
-      description: preferred symbols
       responses:
         '200':
           description: Successful response

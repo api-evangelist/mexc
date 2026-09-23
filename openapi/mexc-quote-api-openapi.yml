@@ -1,6 +1,6 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: MEXC Futures REST API v1 Accounts and Transactions Quote API
+  title: MEXC Futures REST API v1 Quote API
   description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
   version: 1.0.0
 servers:
@@ -14,7 +14,6 @@ paths:
       - Quote
       summary: Ping
       operationId: ping
-      description: Ping
       responses:
         '200':
           description: Successful response
@@ -30,7 +29,6 @@ paths:
       - Quote
       summary: ContractDetail
       operationId: contractdetail
-      description: ContractDetail
       responses:
         '200':
           description: Successful response
@@ -46,7 +44,6 @@ paths:
       - Quote
       summary: DepthBySymbol
       operationId: depthbysymbol
-      description: DepthBySymbol
       responses:
         '200':
           description: Successful response
@@ -62,7 +59,6 @@ paths:
       - Quote
       summary: FundingRateBySymbol
       operationId: fundingratebysymbol
-      description: FundingRateBySymbol
       responses:
         '200':
           description: Successful response
@@ -78,7 +74,6 @@ paths:
       - Quote
       summary: KlineBySymbol
       operationId: klinebysymbol
-      description: KlineBySymbol
       parameters:
       - name: interval
         in: query
@@ -113,7 +108,6 @@ paths:
       - Quote
       summary: IndexPriceKlineBySymbol
       operationId: indexpriceklinebysymbol
-      description: IndexPriceKlineBySymbol
       responses:
         '200':
           description: Successful response
@@ -129,7 +123,6 @@ paths:
       - Quote
       summary: FairPriceKlineBySymbol
       operationId: fairpriceklinebysymbol
-      description: FairPriceKlineBySymbol
       parameters:
       - name: interval
         in: query
@@ -164,7 +157,6 @@ paths:
       - Quote
       summary: DealsBySymbol
       operationId: dealsbysymbol
-      description: DealsBySymbol
       responses:
         '200':
           description: Successful response
@@ -180,7 +172,6 @@ paths:
       - Quote
       summary: Ticker
       operationId: ticker
-      description: Ticker
       responses:
         '200':
           description: Successful response
@@ -196,7 +187,6 @@ paths:
       - Quote
       summary: RiskReverse
       operationId: riskreverse
-      description: RiskReverse
       responses:
         '200':
           description: Successful response
@@ -212,7 +202,6 @@ paths:
       - Quote
       summary: RiskReverseHistory
       operationId: riskreversehistory
-      description: RiskReverseHistory
       parameters:
       - name: symbol
         in: query
@@ -247,7 +236,6 @@ paths:
       - Quote
       summary: FundingRateHistory
       operationId: fundingratehistory
-      description: FundingRateHistory
       parameters:
       - name: symbol
         in: query

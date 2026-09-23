@@ -1,10 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: MEXC Futures REST API v1 Accounts and Transactions Market Date Endpoints API
-  description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
+  title: MEXC Spot REST API v3 Market Date Endpoints API
+  description: MEXC Spot REST API (v3) providing programmatic access to spot trading, market data, account management, and wallet operations.
   version: 1.0.0
 servers:
-- url: https://contract.mexc.com
+- url: https://api.mexc.com
 tags:
 - name: Market Date Endpoints
 paths:
@@ -14,7 +14,6 @@ paths:
       - Market Date Endpoints
       summary: Test Connectivity
       operationId: test_connectivity
-      description: Test Connectivity
       responses:
         '200':
           description: Successful response
@@ -30,7 +29,6 @@ paths:
       - Market Date Endpoints
       summary: Check Server Time
       operationId: check_server_time
-      description: Check Server Time
       responses:
         '200':
           description: Successful response
@@ -46,7 +44,6 @@ paths:
       - Market Date Endpoints
       summary: Exchange Information
       operationId: exchange_information
-      description: Exchange Information
       responses:
         '200':
           description: Successful response
@@ -62,7 +59,6 @@ paths:
       - Market Date Endpoints
       summary: Order Book
       operationId: order_book
-      description: Order Book
       parameters:
       - name: symbol
         in: query
@@ -85,7 +81,6 @@ paths:
       - Market Date Endpoints
       summary: Recent Trades List
       operationId: recent_trades_list
-      description: Recent Trades List
       parameters:
       - name: symbol
         in: query
@@ -108,7 +103,6 @@ paths:
       - Market Date Endpoints
       summary: Old Trade Lookup
       operationId: old_trade_lookup
-      description: Old Trade Lookup
       parameters:
       - name: symbol
         in: query
@@ -131,7 +125,6 @@ paths:
       - Market Date Endpoints
       summary: Compressed/Aggregate Trades List
       operationId: compressed_aggregate_trades_list
-      description: Compressed/Aggregate Trades List
       parameters:
       - name: symbol
         in: query
@@ -154,7 +147,6 @@ paths:
       - Market Date Endpoints
       summary: Kline/Candlestick Data
       operationId: kline_candlestick_data
-      description: Kline/Candlestick Data
       parameters:
       - name: symbol
         in: query
@@ -183,7 +175,6 @@ paths:
       - Market Date Endpoints
       summary: Current Average Price
       operationId: current_average_price
-      description: Current Average Price
       parameters:
       - name: symbol
         in: query
@@ -206,7 +197,6 @@ paths:
       - Market Date Endpoints
       summary: 24hr Ticker Price Change Statistics
       operationId: 24hr_ticker_price_change_statistics
-      description: 24hr Ticker Price Change Statistics
       responses:
         '200':
           description: Successful response
@@ -222,7 +212,6 @@ paths:
       - Market Date Endpoints
       summary: Symbol Price Ticker
       operationId: symbol_price_ticker
-      description: Symbol Price Ticker
       responses:
         '200':
           description: Successful response
@@ -238,7 +227,6 @@ paths:
       - Market Date Endpoints
       summary: Symbol Order Book Ticker
       operationId: symbol_order_book_ticker
-      description: Symbol Order Book Ticker
       responses:
         '200':
           description: Successful response
@@ -254,7 +242,6 @@ paths:
       - Market Date Endpoints
       summary: Default Symbols
       operationId: default_symbols
-      description: Default Symbols
       responses:
         '200':
           description: Successful response

@@ -1,23 +1,16 @@
 {
   "provider": "mexc",
   "sources": [
-    "mexc-accounts-and-transactions-api-openapi.yml",
-    "mexc-eft-api-openapi.yml",
-    "mexc-margin-api-openapi.yml",
-    "mexc-market-date-endpoints-api-openapi.yml",
-    "mexc-parent-child-account-api-openapi.yml",
-    "mexc-quote-api-openapi.yml",
-    "mexc-rebate-api-openapi.yml",
-    "mexc-spot-account-trade-api-openapi.yml",
-    "mexc-wallet-api-openapi.yml"
+    "_original/mexc-futures-rest-api-openapi.json",
+    "_original/mexc-spot-rest-api-openapi.json"
   ],
   "outputs": [
     "mexc-accounts-and-transactions-api-openapi.yml",
+    "mexc-quote-api-openapi.yml",
     "mexc-eft-api-openapi.yml",
     "mexc-margin-api-openapi.yml",
     "mexc-market-date-endpoints-api-openapi.yml",
     "mexc-parent-child-account-api-openapi.yml",
-    "mexc-quote-api-openapi.yml",
     "mexc-rebate-api-openapi.yml",
     "mexc-spot-account-trade-api-openapi.yml",
     "mexc-wallet-api-openapi.yml"
@@ -25,6 +18,30 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "mexc-futures-rest-api-openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "mexc-futures-rest-api-openapi.json: declared missing tag: Accounts and Transactions",
+    "mexc-futures-rest-api-openapi.json: declared missing tag: Quote",
+    "mexc-spot-rest-api-openapi.json: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "mexc-spot-rest-api-openapi.json: declared missing tag: EFT",
+    "mexc-spot-rest-api-openapi.json: declared missing tag: Margin",
+    "mexc-spot-rest-api-openapi.json: declared missing tag: Market Date Endpoints",
+    "mexc-spot-rest-api-openapi.json: declared missing tag: Parent child account",
+    "mexc-spot-rest-api-openapi.json: declared missing tag: Rebate",
+    "mexc-spot-rest-api-openapi.json: declared missing tag: Spot Account/Trade",
+    "mexc-spot-rest-api-openapi.json: declared missing tag: Wallet",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "mexc-accounts-and-transactions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mexc-eft-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mexc-margin-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mexc-market-date-endpoints-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mexc-parent-child-account-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mexc-quote-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mexc-rebate-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mexc-spot-account-trade-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "mexc-wallet-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

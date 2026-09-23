@@ -1,10 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: MEXC Futures REST API v1 Accounts and Transactions Wallet API
-  description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
+  title: MEXC Spot REST API v3 Wallet API
+  description: MEXC Spot REST API (v3) providing programmatic access to spot trading, market data, account management, and wallet operations.
   version: 1.0.0
 servers:
-- url: https://contract.mexc.com
+- url: https://api.mexc.com
 tags:
 - name: Wallet
 paths:
@@ -14,7 +14,6 @@ paths:
       - Wallet
       summary: Withdraw Apply
       operationId: withdraw_apply
-      description: Withdraw Apply
       parameters:
       - name: coin
         in: query
@@ -67,7 +66,6 @@ paths:
       - Wallet
       summary: Query Deposit Hisrec
       operationId: query_deposit_hisrec
-      description: Query Deposit Hisrec
       parameters:
       - name: coin
         in: query
@@ -102,7 +100,6 @@ paths:
       - Wallet
       summary: Query All Coins
       operationId: query_all_coins
-      description: Query All Coins
       parameters:
       - name: signature
         in: query
@@ -131,7 +128,6 @@ paths:
       - Wallet
       summary: Get Listen Key
       operationId: get_listen_key
-      description: Get Listen Key
       parameters:
       - name: signature
         in: query
@@ -165,7 +161,6 @@ paths:
       - Wallet
       summary: Transfer
       operationId: transfer
-      description: Transfer
       parameters:
       - name: fromAccountType
         in: query
@@ -217,7 +212,6 @@ paths:
       - Wallet
       summary: Transfer Record
       operationId: transfer_record
-      description: Transfer Record
       parameters:
       - name: fromAccountType
         in: query
@@ -258,7 +252,6 @@ paths:
       - Wallet
       summary: Withdraw History
       operationId: withdraw_history
-      description: Withdraw History
       parameters:
       - name: coin
         in: query
@@ -293,7 +286,6 @@ paths:
       - Wallet
       summary: Query Transfer By TranId
       operationId: query_transfer_by_tranid
-      description: Query Transfer By TranId
       parameters:
       - name: tranId
         in: query
@@ -328,7 +320,6 @@ paths:
       - Wallet
       summary: Generate Deposit Address
       operationId: generate_deposit_address
-      description: Generate Deposit Address
       parameters:
       - name: coin
         in: query
@@ -368,7 +359,6 @@ paths:
       - Wallet
       summary: Query Deposit Address
       operationId: query_deposit_address
-      description: Query Deposit Address
       parameters:
       - name: coin
         in: query
@@ -409,7 +399,6 @@ paths:
       - Wallet
       summary: Get Assets That Can Be Converted Into MX
       operationId: get_assets_that_can_be_converted_into_mx
-      description: Get Assets That Can Be Converted Into MX
       parameters:
       - name: signature
         in: query
@@ -438,7 +427,6 @@ paths:
       - Wallet
       summary: Dust Transfer
       operationId: dust_transfer
-      description: Dust Transfer
       parameters:
       - name: asset
         in: query
@@ -472,7 +460,6 @@ paths:
       - Wallet
       summary: DustLog
       operationId: dustlog
-      description: DustLog
       parameters:
       - name: signature
         in: query

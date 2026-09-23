@@ -1,10 +1,10 @@
-openapi: 3.0.3
+openapi: 3.2.0
 info:
-  title: MEXC Futures REST API v1 Accounts and Transactions Spot Account/Trade API
-  description: MEXC Futures REST API providing access to perpetual futures trading including order management, position management, and market data.
+  title: MEXC Spot REST API v3 Spot Account/Trade API
+  description: MEXC Spot REST API (v3) providing programmatic access to spot trading, market data, account management, and wallet operations.
   version: 1.0.0
 servers:
-- url: https://contract.mexc.com
+- url: https://api.mexc.com
 tags:
 - name: Spot Account/Trade
 paths:
@@ -14,7 +14,6 @@ paths:
       - Spot Account/Trade
       summary: Test New Order
       operationId: test_new_order
-      description: Test New Order
       parameters:
       - name: symbol
         in: query
@@ -73,7 +72,6 @@ paths:
       - Spot Account/Trade
       summary: New Order
       operationId: new_order
-      description: New Order
       parameters:
       - name: symbol
         in: query
@@ -137,7 +135,6 @@ paths:
       - Spot Account/Trade
       summary: Cancel Orde
       operationId: cancel_orde
-      description: Cancel Orde
       parameters:
       - name: symbol
         in: query
@@ -177,7 +174,6 @@ paths:
       - Spot Account/Trade
       summary: Query Order
       operationId: query_order
-      description: Query Order
       parameters:
       - name: symbol
         in: query
@@ -218,7 +214,6 @@ paths:
       - Spot Account/Trade
       summary: Cancel all Open Orders on a Symbol
       operationId: cancel_all_open_orders_on_a_symbol
-      description: Cancel all Open Orders on a Symbol
       parameters:
       - name: symbol
         in: query
@@ -252,7 +247,6 @@ paths:
       - Spot Account/Trade
       summary: Current Open Orders
       operationId: current_open_orders
-      description: Current Open Orders
       parameters:
       - name: symbol
         in: query
@@ -287,7 +281,6 @@ paths:
       - Spot Account/Trade
       summary: All Orders
       operationId: all_orders
-      description: All Orders
       parameters:
       - name: symbol
         in: query
@@ -322,7 +315,6 @@ paths:
       - Spot Account/Trade
       summary: Account Information
       operationId: account_information
-      description: Account Information
       parameters:
       - name: timestamp
         in: query
@@ -351,7 +343,6 @@ paths:
       - Spot Account/Trade
       summary: Account Trade List
       operationId: account_trade_list
-      description: Account Trade List
       parameters:
       - name: symbol
         in: query
@@ -392,7 +383,6 @@ paths:
       - Spot Account/Trade
       summary: Query Self Symbols
       operationId: query_self_symbols
-      description: Query Self Symbols
       parameters:
       - name: timestamp
         in: query
@@ -421,7 +411,6 @@ paths:
       - Spot Account/Trade
       summary: MxDeduct enable
       operationId: mxdeduct_enable
-      description: MxDeduct enable
       parameters:
       - name: mxDeductEnable
         in: query
@@ -461,7 +450,6 @@ paths:
       - Spot Account/Trade
       summary: Query MxDeduct
       operationId: query_mxdeduct
-      description: Query MxDeduct
       parameters:
       - name: timestamp
         in: query
