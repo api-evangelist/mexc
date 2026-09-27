@@ -988,7 +988,7 @@ paths:
       tags:
       - Accounts and Transactions
       summary: asset analysis
-      operationId: asset_analysis
+      operationId: postApiV1PrivateAccountAssetAnalysisV3
       requestBody:
         content:
           application/json:
@@ -1003,6 +1003,8 @@ paths:
                 type: object
       security:
       - ApiKeyAuth: []
+      x-operation-id-source: normalized
+      x-operation-id-original: asset_analysis
   /api/v1/private/account/asset/analysis/calendar/daily/v3:
     post:
       tags:
