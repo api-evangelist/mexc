@@ -1,141 +1,24 @@
-generated: '2026-07-15'
+generated: '2026-09-23'
 method: generated
-source: openapi/mexc-futures-rest-api-openapi.json, openapi/mexc-spot-rest-api-openapi.json
+source: openapi/mexc-accounts-and-transactions-api-openapi.yml, openapi/mexc-eft-api-openapi.yml,
+  openapi/mexc-margin-api-openapi.yml, openapi/mexc-market-date-endpoints-api-openapi.yml, openapi/mexc-parent-child-account-api-openapi.yml,
+  openapi/mexc-quote-api-openapi.yml, openapi/mexc-rebate-api-openapi.yml, openapi/mexc-spot-account-trade-api-openapi.yml,
+  openapi/mexc-wallet-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
   operations: 142
   by_action_class:
-    connected: 92
-    acting: 50
+    connected: 93
+    acting: 49
   by_consequence:
-    read: 92
+    read: 93
     safety-critical: 6
-    write: 19
+    write: 18
     physical: 25
   human_in_the_loop_required: 6
 operations:
-- path: /api/v1/contract/ping
-  method: get
-  operationId: ping
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v1/contract/detail
-  method: get
-  operationId: contractdetail
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v1/contract/support_currencies
-  method: get
-  operationId: depthbysymbol
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v1/contract/depth_commits/BTC_USDT/20
-  method: get
-  operationId: fundingratebysymbol
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v1/contract/kline/BTC_USDT
-  method: get
-  operationId: klinebysymbol
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v1/contract/kline/index_price/BTC_USDT
-  method: get
-  operationId: indexpriceklinebysymbol
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v1/contract/kline/fair_price/BTC_USDT
-  method: get
-  operationId: fairpriceklinebysymbol
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v1/contract/deals/BTC_USDT
-  method: get
-  operationId: dealsbysymbol
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v1/contract/ticker
-  method: get
-  operationId: ticker
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v1/contract/risk_reverse
-  method: get
-  operationId: riskreverse
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v1/contract/risk_reverse/history
-  method: get
-  operationId: riskreversehistory
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v1/contract/funding_rate/history
-  method: get
-  operationId: fundingratehistory
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
 - path: /api/v1/private/account/assets
   method: get
   operationId: assets
@@ -916,467 +799,9 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /api/v3/ping
-  method: get
-  operationId: test_connectivity
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/time
-  method: get
-  operationId: check_server_time
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/exchangeInfo
-  method: get
-  operationId: exchange_information
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/depth
-  method: get
-  operationId: order_book
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/trades
-  method: get
-  operationId: recent_trades_list
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/historicalTrades
-  method: get
-  operationId: old_trade_lookup
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/aggTrades
-  method: get
-  operationId: compressed_aggregate_trades_list
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/klines
-  method: get
-  operationId: kline_candlestick_data
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/avgPrice
-  method: get
-  operationId: current_average_price
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/ticker/24hr
-  method: get
-  operationId: 24hr_ticker_price_change_statistics
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/ticker/price
-  method: get
-  operationId: symbol_price_ticker
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/ticker/bookTicker
-  method: get
-  operationId: symbol_order_book_ticker
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/defaultSymbols
-  method: get
-  operationId: default_symbols
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/order/test
-  method: post
-  operationId: test_new_order
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /api/v3/order
-  method: post
-  operationId: new_order
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /api/v3/order
-  method: delete
-  operationId: cancel_orde
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /api/v3/order
-  method: get
-  operationId: query_order
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/openOrders
-  method: delete
-  operationId: cancel_all_open_orders_on_a_symbol
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /api/v3/openOrders
-  method: get
-  operationId: current_open_orders
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/allOrders
-  method: get
-  operationId: all_orders
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/account
-  method: get
-  operationId: account_information
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/myTrades
-  method: get
-  operationId: account_trade_list
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/selfSymbols
-  method: get
-  operationId: query_self_symbols
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/mxDeduct/enable
-  method: post
-  operationId: mxdeduct_enable
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /api/v3/mxDeduct/enable
-  method: get
-  operationId: query_mxdeduct
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
 - path: /api/v3/etf/info
   method: get
   operationId: etf_info
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/capital/withdraw/apply
-  method: post
-  operationId: withdraw_apply
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /api/v3/capital/deposit/hisrec
-  method: get
-  operationId: query_deposit_hisrec
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/capital/config/getall
-  method: get
-  operationId: query_all_coins
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/broker/sub-account/apiKey
-  method: post
-  operationId: get_listen_key
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /api/v3/capital/transfer
-  method: post
-  operationId: transfer
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /api/v3/capital/transfer
-  method: get
-  operationId: transfer_record
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/capital/withdraw/history
-  method: get
-  operationId: withdraw_history
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/capital/transfer/tranId
-  method: get
-  operationId: query_transfer_by_tranid
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/capital/deposit/address
-  method: post
-  operationId: generate_deposit_address
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /api/v3/capital/deposit/address
-  method: get
-  operationId: query_deposit_address
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/capital/convert/list
-  method: get
-  operationId: get_assets_that_can_be_converted_into_mx
-  x-agentic-access:
-    action-class: connected
-    consequence: read
-    subject: optional
-    token:
-      max-ttl: 3600
-    audit: none
-- path: /api/v3/capital/convert
-  method: post
-  operationId: dust_transfer
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /api/v3/capital/convert
-  method: get
-  operationId: dustlog
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -1618,6 +1043,136 @@ operations:
     token:
       max-ttl: 3600
     audit: none
+- path: /api/v3/ping
+  method: get
+  operationId: test_connectivity
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/time
+  method: get
+  operationId: check_server_time
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/exchangeInfo
+  method: get
+  operationId: exchange_information
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/depth
+  method: get
+  operationId: order_book
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/trades
+  method: get
+  operationId: recent_trades_list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/historicalTrades
+  method: get
+  operationId: old_trade_lookup
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/aggTrades
+  method: get
+  operationId: compressed_aggregate_trades_list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/klines
+  method: get
+  operationId: kline_candlestick_data
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/avgPrice
+  method: get
+  operationId: current_average_price
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/ticker/24hr
+  method: get
+  operationId: 24hr_ticker_price_change_statistics
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/ticker/price
+  method: get
+  operationId: symbol_price_ticker
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/ticker/bookTicker
+  method: get
+  operationId: symbol_order_book_ticker
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/defaultSymbols
+  method: get
+  operationId: default_symbols
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
 - path: /api/v3/sub-account/virtualSubAccount
   method: post
   operationId: new_virtualsubaccount
@@ -1746,6 +1301,126 @@ operations:
       - abnormal
       - high-value
     audit: required
+- path: /api/v1/contract/ping
+  method: get
+  operationId: ping
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v1/contract/detail
+  method: get
+  operationId: contractdetail
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v1/contract/support_currencies
+  method: get
+  operationId: depthbysymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v1/contract/depth_commits/BTC_USDT/20
+  method: get
+  operationId: fundingratebysymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v1/contract/kline/BTC_USDT
+  method: get
+  operationId: klinebysymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v1/contract/kline/index_price/BTC_USDT
+  method: get
+  operationId: indexpriceklinebysymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v1/contract/kline/fair_price/BTC_USDT
+  method: get
+  operationId: fairpriceklinebysymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v1/contract/deals/BTC_USDT
+  method: get
+  operationId: dealsbysymbol
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v1/contract/ticker
+  method: get
+  operationId: ticker
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v1/contract/risk_reverse
+  method: get
+  operationId: riskreverse
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v1/contract/risk_reverse/history
+  method: get
+  operationId: riskreversehistory
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v1/contract/funding_rate/history
+  method: get
+  operationId: fundingratehistory
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
 - path: /api/v3/rebate/taxQuery
   method: get
   operationId: get_rebate_history_records
@@ -1779,6 +1454,328 @@ operations:
 - path: /api/v3/rebate/referCode
   method: get
   operationId: query_refercode
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/order/test
+  method: post
+  operationId: test_new_order
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v3/order
+  method: post
+  operationId: new_order
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v3/order
+  method: delete
+  operationId: cancel_orde
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v3/order
+  method: get
+  operationId: query_order
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/openOrders
+  method: delete
+  operationId: cancel_all_open_orders_on_a_symbol
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v3/openOrders
+  method: get
+  operationId: current_open_orders
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/allOrders
+  method: get
+  operationId: all_orders
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/account
+  method: get
+  operationId: account_information
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/myTrades
+  method: get
+  operationId: account_trade_list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/selfSymbols
+  method: get
+  operationId: query_self_symbols
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/mxDeduct/enable
+  method: post
+  operationId: mxdeduct_enable
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v3/mxDeduct/enable
+  method: get
+  operationId: query_mxdeduct
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/capital/withdraw/apply
+  method: post
+  operationId: withdraw_apply
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v3/capital/deposit/hisrec
+  method: get
+  operationId: query_deposit_hisrec
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/capital/config/getall
+  method: get
+  operationId: query_all_coins
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/broker/sub-account/apiKey
+  method: post
+  operationId: get_listen_key
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/capital/transfer
+  method: post
+  operationId: transfer
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v3/capital/transfer
+  method: get
+  operationId: transfer_record
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/capital/withdraw/history
+  method: get
+  operationId: withdraw_history
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/capital/transfer/tranId
+  method: get
+  operationId: query_transfer_by_tranid
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/capital/deposit/address
+  method: post
+  operationId: generate_deposit_address
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v3/capital/deposit/address
+  method: get
+  operationId: query_deposit_address
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/capital/convert/list
+  method: get
+  operationId: get_assets_that_can_be_converted_into_mx
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /api/v3/capital/convert
+  method: post
+  operationId: dust_transfer
+  x-agentic-access:
+    action-class: acting
+    consequence: physical
+    subject: required
+    audience: null
+    token:
+      max-ttl: 300
+      exchange: true
+      purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /api/v3/capital/convert
+  method: get
+  operationId: dustlog
   x-agentic-access:
     action-class: connected
     consequence: read
