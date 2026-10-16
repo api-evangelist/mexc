@@ -1,24 +1,22 @@
-# Kin Score artifact — mexc — 2026-09-06T211804
+# Kin Score artifact — mexc — 2026-10-11T110117
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: mexc
-  schema_version: 0.19.0
-  scored_at: '2026-09-06'
-  run_ts: 2026-09-06T211804
-  composite: 46.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-11'
+  run_ts: 2026-10-11T110117
+  composite: 41.4
   band: developing
   facets:
-    discoverability: 68.5
-    contract_quality: 50.0
-    governance: 25.0
-    operational_transparency: 34.2
+    discoverability: 66.1
+    contract_quality: 41.6
+    contract_governance: 23.5
+    operational_transparency: 31.1
     developer_ergonomics: 54.8
-    commercial_clarity: 39.5
-    contract_governance: 25.0
-    access_clarity: 39.5
+    access_clarity: 36.3
   agent_readiness:
-    score: 21.5
+    score: 19.6
     band: agent-aware
     dimensions:
       spec_presence: true
@@ -29,7 +27,7 @@ kin_score:
       idempotency: false
       error_semantics: false
       openapi_examples: false
-      rate_limit_signal: documented
+      rate_limit_signal: derived
       event_surface_described: false
       agent_skills: false
       well_known_catalog: false
@@ -44,7 +42,7 @@ kin_score:
     applies: true
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 38.3
+    score: 21.3
     matched_via: tags
   provenance:
     agentic_access: derived
