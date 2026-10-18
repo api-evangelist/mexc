@@ -74,7 +74,7 @@ apis:
   name: MEXC Broker API
   tags:
   - Account Management
-  - Brokers
+  - Brokerage
   - Cryptocurrency
   - Enterprise
   - Sub Account
@@ -84,6 +84,7 @@ apis:
   - Cryptocurrency
   - Enterprise
   - Sub-Account
+  - Brokers
   image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
   baseURL: https://api.mexc.com
   humanURL: https://mexcdevelop.github.io/apidocs/
