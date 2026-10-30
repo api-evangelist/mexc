@@ -1,4 +1,4 @@
-# MEXC (mexc)
+# MEXC
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,140 +66,156 @@
 
 MEXC is a global cryptocurrency exchange providing REST and WebSocket APIs for spot trading, perpetual futures, market data, order management, account management, and wallet operations across 1,200+ trading pairs. MEXC supports institutional users through a Broker API with sub-account management and a Market Maker Program with tiered rate limits and competitive fee schedules.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/mexc/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/mexc/refs/heads/main/apis.yml)
+**Areas:** Cryptocurrency · Exchange · Trading · Futures · Market Data · Finance · Blockchain
 
-## Scope
+## MEXC on APIs.io
 
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for MEXC is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/mexc/](https://apis.io/providers/mexc/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (12)
 
-- Cryptocurrency
-- Exchange
-- Trading
-- Futures
-- Market Data
-- Finance
-- Blockchain
+- [MEXC Spot WebSocket Streams](https://apis.io/apis/mexc/spot-websocket-streams/) — The MEXC Spot WebSocket Streams deliver real-time market data and user account updates via persistent WebSocket connections. Public channels provide ticker…
+- [MEXC Futures WebSocket API](https://apis.io/apis/mexc/futures-websocket-api/) — The MEXC Futures WebSocket API streams real-time derivatives market data and account events over persistent WebSocket connections. Public channels include…
+- [MEXC Broker API](https://apis.io/apis/mexc/broker-api/) — The MEXC Broker API enables institutional partners to manage sub-accounts and provide trading services to their users. MEXC supports three broker modes: API…
+- [MEXC Accounts and Transactions API](https://apis.io/apis/mexc/mexc-accounts-and-transactions-api/) — The Accounts and Transactions API from MEXC — 59 operation(s) for accounts and transactions.
+- [MEXC EFT API](https://apis.io/apis/mexc/mexc-eft-api/) — The EFT API from MEXC — 1 operation(s) for eft.
+- [MEXC Margin API](https://apis.io/apis/mexc/mexc-margin-api/) — The Margin API from MEXC — 14 operation(s) for margin.
+- [MEXC Market Date Endpoints API](https://apis.io/apis/mexc/mexc-market-date-endpoints-api/) — The Market Date Endpoints API from MEXC — 13 operation(s) for market date endpoints.
+- [MEXC Parent child account API](https://apis.io/apis/mexc/mexc-parent-child-account-api/) — The Parent child account API from MEXC — 6 operation(s) for parent child account.
+- [MEXC Quote API](https://apis.io/apis/mexc/mexc-quote-api/) — The Quote API from MEXC — 12 operation(s) for quote.
+- [MEXC Rebate API](https://apis.io/apis/mexc/mexc-rebate-api/) — The Rebate API from MEXC — 4 operation(s) for rebate.
+- [MEXC Spot Account/Trade API](https://apis.io/apis/mexc/mexc-spot-account-trade-api/) — The Spot Account/Trade API from MEXC — 8 operation(s) for spot account/trade.
+- [MEXC Wallet API](https://apis.io/apis/mexc/mexc-wallet-api/) — The Wallet API from MEXC — 10 operation(s) for wallet.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-06-13
-- **Modified:** 2026-06-13
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### MEXC Spot REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The MEXC Spot REST API (v3) provides programmatic access to MEXC's spot exchange, supporting over 1,200 cryptocurrency trading pairs. Developers can retrieve real-time and historical market data, manage orders, query account balances, and handle wallet operations including deposits, withdrawals, and address management. Authentication uses HMAC SHA256 signed requests with API key credentials provided via the X-MEXC-APIKEY header. The API enforces IP-based and UID-based rate limits of 300 and 500 weight units per 10-second window respectively.
+- [Mexc Agentic Access](https://apis.io/agentic-access/mexc/mexc-agentic-access/)
 
-- **Human URL:** [https://mexcdevelop.github.io/apidocs/spot_v3_en/](https://mexcdevelop.github.io/apidocs/spot_v3_en/)
-- **Base URL:** `https://api.mexc.com`
+#### JSON Schema (2)
 
-#### Tags
+The data models the API reads and writes.
 
-- Cryptocurrency
-- Exchange
-- Market Data
-- Spot
-- Trading
+- [MEXC Order](https://apis.io/schemas/mexc/mexc-order/)
+- [MEXC Ticker](https://apis.io/schemas/mexc/mexc-ticker/)
 
-#### Properties
+#### Examples (3)
 
+Example requests and responses.
+
+- [Mexc Futures Place Order Example](https://apis.io/examples/mexc/mexc-futures-place-order-example/)
+- [Mexc Get Ticker Example](https://apis.io/examples/mexc/mexc-get-ticker-example/)
+- [Mexc Place Order Example](https://apis.io/examples/mexc/mexc-place-order-example/)
+
+#### Collections (9)
+
+Postman and Open Collection request collections.
+
+- [MEXC Futures REST API v1 Accounts and Transactions API](https://apis.io/collections/mexc/open-mexc-accounts-and-transactions-api/)
+- [MEXC Futures REST API v1 Accounts and Transactions EFT API](https://apis.io/collections/mexc/open-mexc-eft-api/)
+- [MEXC Futures REST API v1 Accounts and Transactions Margin API](https://apis.io/collections/mexc/open-mexc-margin-api/)
+- [MEXC Futures REST API v1 Accounts and Transactions Market Date Endpoints API](https://apis.io/collections/mexc/open-mexc-market-date-endpoints-api/)
+- [MEXC Futures REST API v1 Accounts and Transactions Parent child account API](https://apis.io/collections/mexc/open-mexc-parent-child-account-api/)
+- [MEXC Futures REST API v1 Accounts and Transactions Quote API](https://apis.io/collections/mexc/open-mexc-quote-api/)
+- [MEXC Futures REST API v1 Accounts and Transactions Rebate API](https://apis.io/collections/mexc/open-mexc-rebate-api/)
+- [MEXC Futures REST API v1 Accounts and Transactions Spot Account/Trade API](https://apis.io/collections/mexc/open-mexc-spot-account-trade-api/)
+- [MEXC Futures REST API v1 Accounts and Transactions Wallet API](https://apis.io/collections/mexc/open-mexc-wallet-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [MEXC — jsonschema rules](https://apis.io/rules/mexc/mexc-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Mexc Authentication](https://apis.io/security/mexc/mexc-authentication/)
+- [Mexc Domain Security](https://apis.io/security/mexc/mexc-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Mexc Plans Pricing](https://apis.io/plans/mexc/mexc-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Mexc Rate Limits](https://apis.io/rate-limits/mexc/mexc-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Mexc Finops](https://apis.io/finops/mexc/mexc-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.mexc.com/)
 - [Documentation](https://mexcdevelop.github.io/apidocs/spot_v3_en/)
-
-### MEXC Spot WebSocket Streams
-
-The MEXC Spot WebSocket Streams deliver real-time market data and user account updates via persistent WebSocket connections. Public channels provide ticker data, order book depth, trade feeds, and kline/candlestick streams. Private (authenticated) channels deliver order status updates and account balance changes. Each connection supports a maximum of 30 channel subscriptions, with a rate limit of 100 messages per second. Connections are valid for up to 24 hours and require periodic ping/pong keepalives.
-
-- **Human URL:** [https://mexcdevelop.github.io/apidocs/spot_v3_en/#websocket-market-streams](https://mexcdevelop.github.io/apidocs/spot_v3_en/#websocket-market-streams)
-- **Base URL:** `wss://wbs-api.mexc.com/ws`
-
-#### Tags
-
-- Cryptocurrency
-- Market Data
-- Real-Time
-- Streaming
-- WebSocket
-
-#### Properties
-
-- [Documentation](https://mexcdevelop.github.io/apidocs/spot_v3_en/#websocket-market-streams)
-
-### MEXC Futures REST API
-
-The MEXC Futures REST API provides access to MEXC's perpetual futures trading platform. Public endpoints expose contract details, order book depth, index prices, fair prices, funding rates, k-line data, and transaction history without authentication. Authenticated endpoints support account asset management, position management, order placement and cancellation, leverage and margin adjustments, trigger orders, and stop-limit orders. Authentication uses HMAC SHA256 with the ApiKey, Request-Time, and Signature headers. Standard rate limits apply at 20 requests per 2-second window. API Futures trading is subject to a separate fee schedule: maker 0.06% and taker 0.08% as of June 1, 2026.
-
-- **Human URL:** [https://mexcdevelop.github.io/apidocs/contract_v1_en/](https://mexcdevelop.github.io/apidocs/contract_v1_en/)
-- **Base URL:** `https://contract.mexc.com`
-
-#### Tags
-
-- Cryptocurrency
-- Derivatives
-- Exchange
-- Futures
-- Trading
-
-#### Properties
-
-- [Documentation](https://mexcdevelop.github.io/apidocs/contract_v1_en/)
-
-### MEXC Futures WebSocket API
-
-The MEXC Futures WebSocket API streams real-time derivatives market data and account events over persistent WebSocket connections. Public channels include ticker data, trade transactions, order book depth, k-line streams, and funding rate updates. Private channels (requiring login) stream order status changes, position updates, asset balance changes, and ADL level alerts. The API uses the same base domain as the Futures REST API and supports both public and authenticated channel subscriptions in a single connection.
-
-- **Human URL:** [https://mexcdevelop.github.io/apidocs/contract_v1_en/#websocket-api](https://mexcdevelop.github.io/apidocs/contract_v1_en/#websocket-api)
-- **Base URL:** `wss://contract.mexc.com/edge`
-
-#### Tags
-
-- Cryptocurrency
-- Derivatives
-- Futures
-- Real-Time
-- Streaming
-- WebSocket
-
-#### Properties
-
-- [Documentation](https://mexcdevelop.github.io/apidocs/contract_v1_en/#websocket-api)
-
-### MEXC Broker API
-
-The MEXC Broker API enables institutional partners to manage sub-accounts and provide trading services to their users. MEXC supports three broker modes: API Broker for copy-trading and trading bot platforms, Independent Broker for wallet and market-data aggregation platforms, and OAuth Broker for third-party applications using OAuth 2.0. Brokers can create and manage sub-accounts, generate deposit addresses, process withdrawals, enable futures for sub-accounts, perform universal transfers between spot and futures accounts, and track rebate history. Up to 30 sub-accounts can be maintained per master account.
-
-- **Human URL:** [https://mexcdevelop.github.io/apidocs/](https://mexcdevelop.github.io/apidocs/)
-- **Base URL:** `https://api.mexc.com`
-
-#### Tags
-
-- Account Management
-- Broker
-- Cryptocurrency
-- Enterprise
-- Sub-Account
-
-#### Properties
-
-- [Documentation](https://mexcdevelop.github.io/apidocs/)
-
-## Common Properties
-
-- [Portal](https://www.mexc.com/mexc-api)
-- [Documentation](https://mexcdevelop.github.io/apidocs/spot_v3_en/)
-- [Getting Started](https://www.mexc.com/api-docs/spot-v3/introduction)
-- [GitHub Organization](https://github.com/mexcdevelop)
-- [SDKs](https://github.com/mexcdevelop/mexc-api-sdk)
-- [Plans](plans/mexc-plans-pricing.yml)
-- [Rate Limits](rate-limits/mexc-rate-limits.yml)
-- [FinOps](finops/mexc-finops.yml)
-- [Announcements](https://www.mexc.com/announcements/api-updates)
+- [Getting started](https://www.mexc.com/api-docs/spot-v3/introduction)
 - [Support](https://t.me/MEXC_API)
+- [GitHub](https://github.com/mexcdevelop)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 33.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 41.6 |
+| Contract governance | 23.5 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 54.8 |
+| Access clarity | 7.9 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 21.3** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/mexc/](https://apis.io/providers/mexc/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for MEXC: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/mexc/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
